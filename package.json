@@ -1,11 +1,9 @@
 {
+  "homepage": "https://Abhi-coder-abhi.github.io/notes/myhotel ",
   "name": "myhotel",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "express": "^4.17.3"
-  },
-  "devDependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.14",
@@ -25,8 +23,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -48,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
