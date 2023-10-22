@@ -6,19 +6,15 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Chip from '@mui/material/Chip'
 
-export default function RoomCard() {
+export default function RoomCard(props) {
+    console.log(props.image)
     const starStyle = {
         color: 'gold',
       };
     return (
         <Card style={{ minWidth: "350px" }}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    height="140"
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    alt="green iguana"
-                />
+            <CardActionArea style={{cursor:"auto"}}>
+            <img style={{width:"350px"}} src={props.image} alt="My Image" />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         Simple Room Name

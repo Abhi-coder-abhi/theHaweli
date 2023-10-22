@@ -9,14 +9,9 @@ import Chip from '@mui/material/Chip'
 export default function FacilityCard(props) {
     
     return (
-        <Card style={{ maxWidth: "200px",minWidth:'200px' }}>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    height="140"
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    alt="green iguana"
-                />
+        <Card style={{ maxWidth: "200px",minWidth:'200px',cursor: 'auto' }}>
+            <CardActionArea style={{cursor:"auto"}}>
+            <img style={{width:"200px",height:"200px"}} src={props.image} alt="My Image" />
                 <CardContent>
                     <div style={{fontWeight:'bold', textAlign: 'center',fontSize:'16px'}}>
 {props.header}
