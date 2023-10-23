@@ -1,6 +1,6 @@
 import React ,{useEffect,useState}from 'react';
 import RoomCard from '../components/roomCard';
-import BookingCard from '../components/bookingCard';
+import BookingCard from '../components/checkRoomsCard';
 import FacilityCard from '../components/facilityCard';
 import TestimonialCard from '../components/testimonialcard';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -27,7 +27,7 @@ const HomePage = () => {
     // Define your image sources
     const images = [titleimage1, titleimage2, titleimage3, titleimage4, titleimage5];
 
-    useEffect(() => {
+   /* useEffect(() => {
       const interval = setInterval(() => {
         // Change to the next image (0 to 4, then wrap around)
         setCurrentImage((prevImage) => (prevImage === images.length - 1 ? 0 : prevImage + 1));
@@ -38,7 +38,7 @@ const HomePage = () => {
         clearInterval(interval);
       };
     }, []);
-
+*/
     let p1 = "Experience the joy of swimming in our infinity-edge pool that gives you a nice picturesque view."
     let p2 = "We have four in-house different size lawn area offering different lawn that you can choose from."
     let p3 = "We have big and safe children play area for their happiness. People are free to enjoy their events."
