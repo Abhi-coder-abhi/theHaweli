@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <div>
             <footer style={footerStyle}>
-                <div style={{display:"flex"}}>
+                <div style={{display:"flex",color: "#F0E68C",}}>
                 <div >
                     <div style={{ marginLeft: "30px", marginBottom: "20px", marginTop: "40px" }}><h2 >Home</h2></div>
                     <div style={{ marginLeft: "30px", cursor: 'pointer', marginBottom: "10px" }}>About Us</div>
@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
                 </div>
                 <div style={{ marginLeft: "500px", marginBottom: "10px" }}>
-                Copyright © 2023 thehaweliresorts | Powered by https://teksila.in/
+                Copyright © 2023 thehaweliresorts | Powered by <a href="https://teksila.in/" target="_blank" rel="noopener noreferrer" style={{color:"blue"}}>https://teksila.in/</a>
                 </div>
             </footer>
         </div>

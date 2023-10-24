@@ -6,12 +6,13 @@ import Chip from '@mui/material/Chip';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 export default function ContactUs() {
-
+    const widthPercentage = (value, base) => `${(value / 1920) * 130}%`;
+    const cardPercentage  = (value, base) => `${(value / 864) * 130}%`;
     return (
         <div>
-            <div style={{ marginTop: '120px', marginBottom: '50px', fontSize: "30px", textAlign: 'center', fontWeight: "bold" }}><span style={{ borderBottom: "2px solid black", display: 'inline-block' }}>CONTACT US</span></div>
+            <div style={{ marginTop: '120px', marginBottom: '50px', fontSize: "30px", textAlign: 'center', fontWeight: "bold" }}><span style={{ borderBottom: "2px solid #B8860B", display: 'inline-block',fontFamily: "cursive",color:"#B8860B"}}>CONTACT US</span></div>
             <div style={{ display: "flex" }}>
-                <Card style={{ width: '700px', marginTop: '80px', marginLeft: '20px' }}>
+                <Card style={{ width: widthPercentage(700), marginTop: '80px', marginLeft: '20px',border:"5px solid #F0E68C" }}>
                     <div style={{ height: '400px', flex: '1' }}>
                         <div
                             id="map-container-google-1"
@@ -26,7 +27,7 @@ export default function ContactUs() {
                             ></iframe>
                         </div>
                     </div>
-                    <div style={{ paddingLeft: '20px', marginTop: '60px' }}>
+                    <div style={{ paddingLeft:"20px", marginTop: '60px' }}>
                         <div style={{ fontSize: '20px', fontWeight: 'bold' }}>Address</div>
                         <div style={{ display: 'flex', fontSize: '16px', marginTop: '10px' }}>
                             <PhoneIcon style={{ fontSize: '16px' }} />
@@ -36,7 +37,7 @@ export default function ContactUs() {
                         <div style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '30px' }}>Call Us</div>
                         <div style={{ display: 'flex', fontSize: '16px', marginTop: '10px' }}>
                             <PhoneIcon style={{ fontSize: '16px' }} />+91971890521
-                            <PhoneIcon style={{ fontSize: '16px', marginLeft: '10px' }} />+918789618100
+                            <PhoneIcon style={{ fontSize: '16px', marginLeft: widthPercentage(10) }} />+918789618100
                         </div>
                         <PhoneIcon style={{ fontSize: '16px', marginTop: '10px' }} />+91971890521
                         <div style={{ marginTop: '30px' }}>
@@ -68,18 +69,18 @@ export default function ContactUs() {
                         </div>
                     </div>
                 </Card>
-                <Card style={{ width: '700px', height: "900px", marginTop: '80px', marginLeft: '40px', marginRight: "20px" }}>
+                <Card style={{ width: '700px', height: "900px", marginTop: '80px', marginLeft: '40px', marginRight: "20px",border:"5px solid #F0E68C" }}>
                     <form style={{ paddingLeft: "25px" }}>
-                        <div style={{ fontSize: "24px", marginTop: "30px", fontWeight: "bold" }}>Send a Message</div>
-                        <div style={{ fontSize: "20px", marginTop: "20px", fontWeight: "bold" }}>Name</div>
-                        <input type="text" style={{ height: "35px", marginTop: "5px", width: "600px", fontSize: "16px" }} />
-                        <div style={{ fontSize: "20px", marginTop: "20px", fontWeight: "bold" }}>Email</div>
-                        <input type="text" style={{ height: "35px", marginTop: "5px", width: "600px", fontSize: "16px" }} />
-                        <div style={{ fontSize: "20px", marginTop: "20px", fontWeight: "bold" }}>Subject</div>
-                        <input type="text" style={{ height: "35px", marginTop: "5px", width: "600px", fontSize: "16px" }} />
-                        <div style={{ fontSize: "20px", marginTop: "20px", fontWeight: "bold" }}>Message</div>
-                        <textarea type="text" style={{ height: "100px", marginTop: "5px", width: "590px", fontSize: "14px", padding: "10px" }} />
-                        <button style={{ fontSize: "18px", marginTop: "20px", padding: "5px", backgroundColor: 'white', cursor: 'pointer', border: '2px solid black', borderRadius: "5px", fontWeight: "bold", backgroundColor: "#84E4F7", color: "white" }}>Submit</button>
+                        <div style={{ fontSize: "24px", marginTop: "30px", fontWeight: "bold",color: "#CC9900",fontFamily: "cursive" }}>Send a Message</div>
+                        <div style={{ fontSize: "20px", marginTop: "20px", fontWeight: "bold",color: "#8A3324", }}>Name</div>
+                        <input type="text" style={{ height: "35px", marginTop: "5px", width: cardPercentage(600), fontSize: "16px" }} />
+                        <div style={{ fontSize: "20px", marginTop: "20px", fontWeight: "bold",color: "#8A3324", }}>Email</div>
+                        <input type="text" style={{ height: "35px", marginTop: "5px", width: cardPercentage(600), fontSize: "16px" }} />
+                        <div style={{ fontSize: "20px", marginTop: "20px", fontWeight: "bold",color: "#8A3324", }}>Subject</div>
+                        <input type="text" style={{ height: "35px", marginTop: "5px", width: cardPercentage(600), fontSize: "16px" }} />
+                        <div style={{ fontSize: "20px", marginTop: "20px", fontWeight: "bold",color: "#8A3324", }}>Message</div>
+                        <textarea type="text" style={{ height: "100px", marginTop: "5px", width: cardPercentage(590), fontSize: "14px", padding: "10px" }} />
+                        <button style={{ fontSize: "18px", marginTop: "20px", padding: "5px", backgroundColor: 'white', cursor: 'pointer', border: '2px solid #8A3324', borderRadius: "5px", fontWeight: "bold", backgroundColor: "#F0E68C", color: "#8A3324", }}>Submit</button>
                     </form>
                 </Card>
             </div>

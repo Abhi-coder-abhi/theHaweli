@@ -9,11 +9,11 @@ import Chip from '@mui/material/Chip'
 export default function FacilityCard(props) {
     
     return (
-        <Card style={{ maxWidth: "200px",minWidth:'200px',cursor: 'auto' }}>
+        <Card style={{ width: "35vh",cursor: 'auto' ,borderTop: '5px solid red'}}>
             <CardActionArea style={{cursor:"auto"}}>
-            <img style={{width:"200px",height:"200px"}} src={props.image} alt="My Image" />
+            <img style={{width:"100%",height:"200px"}} src={props.image} alt="My Image" />
                 <CardContent>
-                    <div style={{fontWeight:'bold', textAlign: 'center',fontSize:'16px'}}>
+                    <div style={{fontWeight:'bold', textAlign: 'center',fontSize:'16px',color:"#8A3324"}}>
 {props.header}
                     </div>
                     <div style={{ textAlign: 'center',fontSize:'14px',marginTop:'5px'}}>

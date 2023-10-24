@@ -3,6 +3,8 @@ import "./css/header.css"
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const entireScreenWidth = window.innerHeight/380
+  console.log(entireScreenWidth)
   const [loginStatus, setLoginStatus] = useState(false)
   const [registerStatus, setRegisterStatus] = useState(false)
   const [loginMail, setLoginMail] = useState("")
@@ -20,10 +22,8 @@ const Header = () => {
   const handleLogin = (e) => {
     const { name, value, } = e.target;
     if (name === 'loginemail') {
-      // Update the loginMail state when the email input changes
       setLoginMail(value);
     } else if (name === 'loginpassword') {
-      // Update the loginPassword state when the password input changes
       setLoginPassword(value);
     }
   };
@@ -96,8 +96,9 @@ const Header = () => {
   }
   const headerStyle = {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between', // Pushes items to both ends
+    justifyContent: 'space-between', 
+    alignItems:"center",// Pushes items to both ends
+    padding: "10px",
   };
   const contentContainerStyle = {
     display: 'flex',
@@ -124,16 +125,17 @@ const Header = () => {
   const closeRegisterModal = () => {
     setRegisterModalOpen(false);
   };
-
+//<div style={{ marginLeft: "30px", cursor: 'pointer' ,color:"#F0E68C"}} onClick={() => navigate('/')} >Home</div>
   return (
     <div>
-      <header className="fixed-header" style={headerStyle}>
+      <header className="fixed-header" >
+        <div style={headerStyle}>
         <div style={contentContainerStyle}>
-          <div style={{ marginLeft: "30px", cursor: 'pointer' }} onClick={() => navigate('/')}>Home</div>
-          <div style={{ marginLeft: "20px", cursor: 'pointer' }} onClick={() => navigate('/rooms')}>Rooms</div>
-          <div style={{ marginLeft: "20px", cursor: 'pointer' }} onClick={() => navigate('/facilities')}>Facilities</div>
-          <div style={{ marginLeft: "20px", cursor: 'pointer' }} onClick={() => navigate('/contactus')}>Contact us</div>
-          <div style={{ marginLeft: "20px", cursor: 'pointer' }} onClick={() => navigate('/about')}>About</div>
+         
+          <div style={{ marginLeft: "20px", cursor: 'pointer',fontSize:"120%"  ,color:"#F0E68C"}} onClick={() => navigate('/rooms')}>Rooms</div>
+          <div style={{ marginLeft: "20px", cursor: 'pointer',fontSize:"120%"  ,color:"#F0E68C"}} onClick={() => navigate('/facilities')}>Facilities</div>
+          <div style={{ marginLeft: "20px", cursor: 'pointer',fontSize:"120%"  ,color:"#F0E68C"}} onClick={() => navigate('/contactus')}>Contact us</div>
+          <div style={{ marginLeft: "20px", cursor: 'pointer',fontSize:"120%"  ,color:"#F0E68C"}} onClick={() => navigate('/about')}>About</div>
         </div>
         <div style={buttonContainerStyle}>
           <button style={{ marginRight: "10px", fontSize: '18px', borderRadius: '10px', padding: '10px 20px', cursor: 'pointer' }} onClick={openRegisterModal} disabled={loginStatus || registerStatus}>Register</button>
@@ -150,8 +152,18 @@ const Header = () => {
                Login
             </button>
           )}
-
+</div>
         </div>
+        <div style={{ position: "absolute", top: "1vh", left: "50%", transform: "translateX(-50%)", textAlign: "center", color: "#F0E68C", fontSize: "24px", fontWeight: "bold",cursor:"pointer",fontFamily: "cursive" }}
+        onClick={() => navigate('/')}>
+  THE HAWELI
+</div>
+<div style={{ position: "absolute", top: "5vh", left: "50%", transform: "translateX(-50%)", textAlign: "center", color: "#F0E68C", fontSize: "24px", fontWeight: "bold",cursor:"pointer",fontFamily: "cursive" }}
+onClick={() => navigate('/')}>
+  Resort
+</div>
+
+       
       </header>
       {isLoginModalOpen && (
         <div className="modal">

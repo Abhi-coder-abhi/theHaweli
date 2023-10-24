@@ -63,7 +63,7 @@ export default function BookingCard() {
         }
       };
     return (
-        <Card sx={{ minWidth: 275 }} style={{ borderRadius: '10px' }}>
+        <Card sx={{ minWidth: 275 }} style={{ borderRadius: '10px',backgroundColor: "lightyellow"}}>
             <CardContent>
                 <h2 style={{ marginLeft: "20px" }}>Check Booking Availability</h2>
                 <div style={{ display: 'flex' }}>
@@ -111,7 +111,7 @@ export default function BookingCard() {
                     </div>
                     <div>
                         <div style={{ marginLeft: "20px", marginTop: '15px', fontSize: '16px', fontWeight: 'bold' }}></div>
-                        <button style={{ marginLeft: "20px",marginRight: "20px", marginTop: '28px', fontSize: '16px', height: '40px', borderRadius: '10px', padding: '5px 10px', border: '1px solid #999',cursor:"pointer" }} onClick={handleFormSubmit}>Submit</button>
+                        <button style={{ marginLeft: "20px",marginRight: "20px", marginTop: '28px', fontSize: '16px', height: '40px', borderRadius: '10px', padding: '5px 10px', border: '1px solid #999',cursor:"pointer",backgroundColor:"black",color:"white", }} onClick={handleFormSubmit}>Submit</button>
                     </div>
                 </div>
             </CardContent>

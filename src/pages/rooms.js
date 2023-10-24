@@ -3,6 +3,8 @@ import RoomCard from '../components/roomCard';
 import BookingCard from '../components/checkRoomsCard';
 import roomimage1 from "../images/rooms/1.jpg"
 import roomimage2 from "../images/rooms/2.jpg"
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export default function Rooms() {
     const [isBookingCardVisible, setCheckRoomCardVisible] = useState(false);
@@ -16,24 +18,26 @@ export default function Rooms() {
 
     return (
         <div>
-            <div style={{ marginTop: '120px', marginBottom: '50px', fontSize: "30px", textAlign: 'center', fontWeight: "bold" }}><span style={{ borderBottom: "2px solid black", display: 'inline-block' }}>OUR ROOMS</span></div>
-            <div style={{ marginLeft: "100px", marginRight: "100px" }}>
-                <button
+            <div style={{ marginTop: '8%', marginBottom: '2.5%', fontSize: "30px", textAlign: 'center', fontWeight: "bold" }}><span style={{ borderBottom: "2px solid #B8860B", display: 'inline-block',fontFamily: "cursive",color:"#B8860B" }}>OUR ROOMS</span></div>
+            <div style={{ marginRight: "5%" }}>
+                <div
                     onClick={handleApplyFiltersClick}
-                    style={{ marginTop: '30px', fontSize: "20px", borderRadius: "5px", backgroundColor: "white", cursor: "pointer" }}
+                    style={{ marginTop: '1.5%', fontSize: "40px",   cursor: "pointer" }}
                 >
-                    Apply Filters
-                </button>
+                <ArrowForwardIcon/>
+                </div>
                 {isBookingCardVisible && (
+                    <div style={{marginLeft:"5%"}}>
                     <BookingCard onClose={handleBookingCardClose} />
+                    </div>
                 )}
             </div>
-            <div style={{ display: 'flex', marginLeft: "100px", marginTop: "100px" }}>
+            <div style={{ display: 'flex', marginLeft: "5%", marginTop: "5%" }}>
                 <RoomCard image={roomimage1} />
-                <div style={{ marginLeft: '100px' }}>
+                <div style={{ marginLeft: '5%' }}>
                     <RoomCard image={roomimage2} />
                 </div>
-                <div style={{ marginLeft: '100px' }}>
+                <div style={{ marginLeft: '5%' }}>
                     <RoomCard image={roomimage1} />
                 </div>
             </div>

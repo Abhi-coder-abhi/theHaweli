@@ -65,7 +65,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div style={{ marginTop: '80px', marginBottom: '50px', marginLeft: "350px" }}>
-                    <button sx={{ width: '70px', height: '25px' }} style={{ fontSize: '16px', marginTop: "7px", marginLeft: '180px', padding: '10px', backgroundColor: 'white', cursor: 'pointer', border: '1px solid black', fontWeight: 'bold' }}>More Rooms &gt;&gt;&gt;</button>
+                    <button sx={{ width: '70px', height: '25px' }} style={{ fontSize: '16px', marginTop: "7px", marginLeft: '180px', padding: '10px', cursor: 'pointer', border: '2px solid #8A3324', borderRadius: "5px", fontWeight: "bold", backgroundColor: "#F0E68C", color: "#8A3324", }}>More Rooms &gt;&gt;&gt;</button>
                 </div>
                 <div style={{ marginTop: '80px', marginBottom: '50px', fontSize: "30px", textAlign: 'center', }}>OUR FACILITIES</div>
                 <div style={{ display: 'flex' }}>

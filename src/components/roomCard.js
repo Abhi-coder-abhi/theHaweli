@@ -6,6 +6,7 @@ import { CardActionArea } from '@mui/material';
 import Chip from '@mui/material/Chip'
 
 export default function RoomCard(props) {
+    const widthPercentage = (value, base) => `${(value / 1920) * 130}%`;
     const email = localStorage.getItem('email');
     console.log(email)
     const [selectedRoom, setSelectedRoom] = useState('single');
@@ -43,7 +44,9 @@ export default function RoomCard(props) {
             setSelectedRoom(value)
     };
     const handleSubmit = (event) => {
+        
         event.preventDefault();
+        formData.email=email
         console.log(formData)
         if (email) {
             // If email is present, proceed with the fetch request
@@ -72,9 +75,9 @@ export default function RoomCard(props) {
     }
     return (
         <div>
-            <Card style={{ minWidth: "350px", }}  >
+            <Card style={{ width: widthPercentage(1250), }}  >
                 <CardActionArea style={{ cursor: "auto" }}>
-                    <img style={{ width: "350px" }} src={props.image} alt="" />
+                    <img style={{ width:"100%" }} src={props.image} alt="" />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
                             Simple Room Name
@@ -134,7 +137,8 @@ export default function RoomCard(props) {
                             <Chip label={<span style={starStyle}>★★★★</span>} sx={{ width: '75px', height: '20px' }} style={{ fontSize: '15px' }} />
                         </div>
                         <div>
-                            <button sx={{ width: '70px', height: '25px' }} style={{ fontSize: '16px', marginTop: "7px", marginLeft: '180px', padding: '10px', cursor: 'pointer', border: '1px solid black', borderRadius: "5px", fontWeight: "bold", backgroundColor: "#84E4F7", color: "white" }}
+                            <button sx={{ width: '70px', height: '25px' }} style={{ fontSize: '16px', marginTop: "7px", marginLeft: '180px', 
+                            padding: '10px', cursor: 'pointer', border: '2px solid #8A3324', borderRadius: "5px", fontWeight: "bold", backgroundColor: "#F0E68C", color: "#8A3324", }}
                                 onClick={openBookingModal}>   Book Now</button>
                         </div>
                     </CardContent>
