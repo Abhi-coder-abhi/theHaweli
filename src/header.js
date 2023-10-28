@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PhoneIcon from '@mui/icons-material/Phone';
+import WhatsApp from '@mui/icons-material/WhatsApp';
 
 // Import the icons you want to use
 import { faHotel, } from '@fortawesome/free-solid-svg-icons';
@@ -31,6 +32,16 @@ const Header = () => {
     email: "",
     password: "",
   });
+  const handleWhatsAppClick = (phoneNumber) => {
+    // Format the phone number to remove any non-numeric characters
+    const formattedPhoneNumber = phoneNumber.replace(/\D/g, '');
+
+    // Construct the WhatsApp URL
+    const whatsappURL = `whatsapp://send?phone=${formattedPhoneNumber}`;
+
+    // Attempt to open the WhatsApp app
+    window.location.href = whatsappURL;
+  };
   const handleLogin = (e) => {
     const { name, value, } = e.target;
     if (name === 'loginemail') {
@@ -151,9 +162,10 @@ const Header = () => {
             <div style={{ marginLeft: "1.25vw", cursor: 'pointer', fontSize: "1.25vw", color: "#F0E68C" }} onClick={() => navigate('/images')}>Photos</div>
           </div>
           <div style={buttonContainerStyle}>
-            <div style={{color:"gold",fomtsize:"0.8vw",marginRight: "0.75vw"}}>
-            <PhoneIcon style={{ fontSize: '0.9vw', marginTop: `${11 / 16}vw`,color:"#333366",color:"gold"  }} /><a style={{ fontSize: '1vw' }}>971890521</a>
-          </div>
+            <div style={{ color: "gold", fomtsize: "0.8vw", marginRight: "0.75vw" }}>
+            <WhatsApp style={{ fontSize: '0.9vw', marginTop: `${11 / 16}vw`, color: "gold", cursor: "pointer" }} />
+  <a style={{ fontSize: '1vw', cursor: "pointer", borderBottom: '2px solid gold' }} onClick={() => handleWhatsAppClick("+971890521")}>971890521</a>
+            </div>
             <button style={{ marginRight: "0.75vw", fontSize: `${18 / 16}vw`, borderRadius: `${10 / 16}vw`, padding: `${10 / 16}vw ${10 / 16}vw`, cursor: 'pointer' }} onClick={openRegisterModal} disabled={loginStatus || registerStatus}>Register</button>
             {loginStatus ? (
 
@@ -169,10 +181,10 @@ const Header = () => {
               </button>
             )}
 
-           
+
           </div>
         </div>
-        <div style={{fontSize: `${24 / 16}vw`}}>
+        <div style={{ fontSize: `${24 / 16}vw` }}>
 
           <div style={{ position: "absolute", top: "0.6vw", left: "50%", transform: "translateX(-50%)", textAlign: "center", color: "#F0E68C", fontSize: `${24 / 16}vw`, fontWeight: "bold", cursor: "pointer", fontFamily: "cursive" }}
             onClick={() => navigate('/')}>
@@ -188,15 +200,15 @@ const Header = () => {
       </header>
       {isLoginModalOpen && (
         <div className="modal">
-          <div className="modal-content" style={{ marginLeft: "470px", marginRight: "470px", marginTop: "20px" }}>
+          <div className="modal-content" style={{ marginLeft: `${470/ 16}vw`, marginRight: `${470/ 16}vw`, marginTop: "20px" }}>
             <form>
               <div style={{ fontSize: '25px', fontWeight: "bold" }}> User Login</div>
 
               <div style={{ fontSize: '20px', marginTop: "20px" }}> Email ID</div>
-              <input style={{ fontSize: '18px', width: '400px', padding: "10px" }} type="text" onChange={handleLogin} name='loginemail' />
+              <input style={{ fontSize: '18px', width: `${400/ 16}vw`, padding: "10px" }} type="text" onChange={handleLogin} name='loginemail' />
 
               <div style={{ fontSize: '20px', marginTop: "10px" }} type="password" > Password</div>
-              <input style={{ fontSize: '18px', width: '400px', padding: "10px" }} type="password" onChange={handleLogin} name='loginpassword' />
+              <input style={{ fontSize: '18px', width: `${400/ 16}vw`, padding: "10px" }} type="password" onChange={handleLogin} name='loginpassword' />
               <div style={{ display: "flex", marginTop: "10px" }}>
                 <button style={{ fontSize: "20px", cursor: 'pointer' }} onClick={handleLoginSubmit}>Submit</button>
                 <button style={{ fontSize: "20px", marginLeft: "10px", cursor: 'pointer' }} onClick={closeLoginModal}>Cancel</button>
@@ -208,53 +220,53 @@ const Header = () => {
 
       {isRegisterModalOpen && (
         <div className="modal">
-          <div className="modal-content" style={{ marginLeft: "400px", marginRight: "400px", marginTop: "20px", display: 'flex' }}>
-            <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-              <div style={{ fontSize: '25px', fontWeight: "bold" }}> User Registration</div>
-              <div style={{ display: 'flex' }}>
-                <div style={{ flex: 1, paddingRight: '20px' }}>
-                  <div style={{ fontSize: '20px', marginTop: "20px" }}> Name</div>
-                  <input style={{ fontSize: '18px', width: '100%', padding: "5px" }} type="text" onChange={handleChange} name='name' />
+          <div className="modal-content" style={{ marginLeft: `${700/ 16}vw`, marginRight: `${400/ 16}vw`, marginTop: "20px", display: 'flex' }}>
+            <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: `${400/ 16}vw`,marginLeft:"1vw" }}>
+              <div style={{ fontSize: `${25/ 16}vw`, fontWeight: "bold" }}> User Registration</div>
+              <div style={{ display: 'flex',textAlign:"center" }}>
+                <div style={{ flex: 1, paddingRight: `${20/ 16}vw`}}>
+                  <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${20/ 16}vw` }}> Name</div>
+                  <input style={{ fontSize: `${18/ 16}vw`, width: "11vw", padding:  `${5/ 16}vw` }} type="text" onChange={handleChange} name='name' />
 
 
-                  <div style={{ fontSize: '20px', marginTop: "10px" }}> Password</div>
-                  <input style={{ fontSize: '15px', width: '100%', padding: "5px" }} type="password" onChange={handleChange} name='password' />
+                  <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${10/ 16}vw` }}> Password</div>
+                  <input style={{ fontSize:  `${15/ 16}vw`, width: '11vw', padding:  `${5/ 16}vw` }} type="password" onChange={handleChange} name='password' />
 
-                  <div style={{ fontSize: '20px', marginTop: "10px" }}> Confirm Password</div>
-                  <input style={{ fontSize: '15px', width: '100%', padding: "5px" }} type="password" onChange={handleChange} name='confirmPassword' />
+                  <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${10/ 16}vw` }}> Confirm Password</div>
+                  <input style={{ fontSize:  `${15/ 16}vw`, width: '11vw', padding:  `${5/ 16}vw`}} type="password" onChange={handleChange} name='confirmPassword' />
                 </div>
-                <div style={{ flex: 1, paddingLeft: '20px' }}>
+                <div style={{ flex: 1, paddingLeft: `${20/ 16}vw` }}>
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ fontSize: '20px', marginTop: "20px" }}> Email ID</div>
-                    <input style={{ fontSize: '18px', width: '100%', padding: "5px" }} type="text" onChange={handleChange} name='email' />
-                    <div style={{ fontSize: '20px', marginTop: "10px" }}> Phone Number</div>
-                    <input style={{ fontSize: '18px', width: '100%', padding: "5px" }} type="text" onChange={handleChange} name='phoneNumber' />
-                    <div style={{ fontSize: '20px', marginTop: "10px" }}> Pincode</div>
-                    <input style={{ fontSize: '15px', width: '100%', padding: "5px" }} type="text" onChange={handleChange} name='pincode' />
+                    <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${20/ 16}vw` }}> Email ID</div>
+                    <input style={{ fontSize: `${18/ 16}vw`, width: '11vw', padding:  `${5/ 16}vw` }} type="text" onChange={handleChange} name='email' />
+                    <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${10/ 16}vw` }}> Phone Number</div>
+                    <input style={{ fontSize: `${18/ 16}vw`, width: '11vw', padding: `${5/ 16}vw` }} type="text" onChange={handleChange} name='phoneNumber' />
+                    <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${10/ 16}vw` }}> Pincode</div>
+                    <input style={{ fontSize: '15px', width: '11vw', padding: `${5/ 16}vw` }} type="text" onChange={handleChange} name='pincode' />
                   </div>
                 </div>
               </div>
-              <div style={{ fontSize: '20px', marginTop: "10px" }}> Address</div>
-              <input style={{ fontSize: '15px', width: '80%', padding: "5px", marginLeft: "10px" }} type="text" onChange={handleChange} name='address' />
+              <div style={{ fontSize: `${20/ 16}vw`, marginTop: "10px" }}> Address</div>
+              <input style={{ fontSize:  `${15/ 16}vw`, width: '18vw', padding: "5px", marginLeft: "10px" }} type="text" onChange={handleChange} name='address' />
               <div style={{ display: 'flex' }}>
-                <div style={{ flex: 1, paddingRight: '20px' }}>
-                  <div style={{ fontSize: '20px', marginTop: "20px" }}> Photo</div>
-                  <input style={{ fontSize: '16px', width: '100%', padding: "5px" }} type="file"
+                <div style={{ flex: 1, paddingRight: `${20/ 16}vw`}}>
+                  <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${20/ 16}vw`,marginLeft:"0.5vw" }}> Photo</div>
+                  <input style={{ fontSize: '1vw', width: '11vw', padding:  `${5/ 16}vw`}} type="file"
                     accept=".jpg, .jpeg, .png"
                     onChange={handleChange} name='image' />
                 </div>
-                <div style={{ flex: 1, paddingLeft: '20px' }}>
+                <div style={{ flex: 1, paddingLeft:  `${20/ 16}vw` }}>
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ fontSize: '20px', marginTop: "20px" }}> D.O.B.</div>
-                    <input style={{ fontSize: '18px', width: '100%', padding: "5px" }} type="date" onChange={handleChange} name='dateOfBirth' />
+                    <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${20/ 16}vw` }}> D.O.B.</div>
+                    <input style={{ fontSize: `${18/ 16}vw`, width: '11vw', padding: `${4/ 16}vw` }} type="date" onChange={handleChange} name='dateOfBirth' />
                   </div>
                 </div>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                <button style={{ fontSize: '20px', textAlign: 'center', marginRight: '10px', cursor: 'pointer' }} onClick={handleSubmit}>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: `${20/ 16}vw` }}>
+                <button style={{ fontSize: `${20/ 16}vw`, textAlign: 'center', marginRight:  `${10/ 16}vw`, cursor: 'pointer' }} onClick={handleSubmit}>
                   Submit
                 </button>
-                <button style={{ fontSize: '20px', textAlign: 'center', cursor: 'pointer' }} onClick={closeRegisterModal}>
+                <button style={{ fontSize: `${20/ 16}vw`, textAlign: 'center', cursor: 'pointer' }} onClick={closeRegisterModal}>
                   Cancel
                 </button>
               </div>

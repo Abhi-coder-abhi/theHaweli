@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-
 import { CardActionArea } from '@mui/material';
 import Chip from '@mui/material/Chip'
 
@@ -80,10 +79,10 @@ export default function RoomCard({ openModal }) {
     /**/
     return (
         <div >
-            <Card style={{ marginLeft: "2.7vw", width: "25vw", border: '3px solid #8A3324', backgroundColor: "lightyellow", display: "flex" }}  >
+            <Card style={{ marginLeft: "2.7vw", width: "25vw", border: '3px solid #8A3324', backgroundColor: "lightyellow", display: "flex",height:"25vw" }}  >
                 <CardContent >
                     <div>
-                        <Typography gutterBottom variant="h5" component="div" style={{ fontWeight: "bold", fontFamily: "cursive", color: "#8A3324",fontSize: "1vw" }}>
+                        <Typography gutterBottom variant="h5" component="div" style={{ fontWeight: "bold", fontFamily: "cursive", color: "#8A3324",fontSize: "1vw",marginTop:"0.5vw" }}>
                             Simple Bed Room
                         </Typography>
 

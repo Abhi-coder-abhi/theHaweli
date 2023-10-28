@@ -9,10 +9,14 @@ import Facilities from './pages/facilities';
 import Images from './pages/images';
 import Faqs from './pages/faqs';
 import Reviews from './pages/reviews';
+import Accomodations from './pages/accomodations';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
+  const theme = createTheme();
   return (
+    <ThemeProvider theme={theme}>
     <Router className="App">
       <Header />
       <Routes>
@@ -24,9 +28,11 @@ function App() {
         <Route path="/images" element={<Images />} />
         <Route path="/faqs" element={<Faqs/>} />
         <Route path="/reviews" element={<Reviews/>} />
+        <Route path="/accomodations" element={<Accomodations/>} />
       </Routes>
       <Footer />
     </Router>
+    </ThemeProvider>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { useMediaQuery } from '@mui/material';
 
 export default function BookingCard() {
     const [checkInDate, setCheckInDate] = useState('');
@@ -9,6 +10,7 @@ export default function BookingCard() {
     const [children, setChildren] = useState("");
     const email = localStorage.getItem('email');
     const [type, setType] = useState("single");
+    
     console.log("b", email)
 
 
@@ -40,9 +42,22 @@ export default function BookingCard() {
             alert('Room is Available Now');
             // You can also navigate to the login page or take other actions as needed
         }
+        const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
     
     return (
-        <Card sx={{ width: "85vw", marginLeft: "8vw", height: "10vw" }} style={{ borderRadius: `${15 / 16}vw`,backgroundColor:"rgba(0, 123, 255, 0.5)" }}>
+        <Card
+      sx={{ width: '85vw', marginLeft: '8vw', height: '10vw' }}
+      style={{
+        borderRadius: '15px',
+        backgroundColor: 'rgba(255, 255, 150, 0.5)',
+        // Apply styles only for mobile screens
+        ...(isMobile && {
+          width: '100%',
+          marginLeft: '0',
+          // Add more mobile-specific styles here
+        }),
+      }}
+    >
             <CardContent>
                 <h2 style={{ marginLeft: "1.5vw", color: "#8A3324", fontSize: "1vw" }}>Check Booking Availability</h2>
                 <div style={{ display: 'flex' }}>
