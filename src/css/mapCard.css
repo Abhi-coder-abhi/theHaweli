@@ -1,0 +1,11 @@
+/* CSS */
+.map-card-homepage-card {
+  width: 50vw; height: 25vw;
+  }
+  
+  @media (max-width: 600px) {
+    .map-card-homepage-card {
+      width: 80vw;
+    }
+  }
+  

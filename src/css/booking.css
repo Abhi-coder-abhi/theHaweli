@@ -1,0 +1,105 @@
+.my-booking-card{
+    width:85vw;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 150, 0.5);
+
+}
+.booking-card-header{
+    margin-left: 1.5vw;
+     color: #8A3324;
+     font-size: 1vw;
+}
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    margin-left: 1.5vw;
+    margin-top: 0.9375vw; /* Equivalent to 15/16 */
+    font-size: 1vw;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-card-label {
+    display: block;
+  }
+  
+  .booking-card-input {
+    margin-top: 0.625vw; /* Equivalent to 10/16 */
+    font-size: 1vw;
+    width: 13vw;
+    height: 1.2vw; /* Equivalent to 30/16 */
+    border-radius: 0.625vw; /* Equivalent to 10/16 */
+    padding: 0.3125vw 0.625vw; /* Equivalent to 5/16 10/16 */
+    border: 0.0625vw solid #999;
+    cursor: pointer;
+  }
+  .booking-card-select {
+    margin-top: 0.625vw; /* Equivalent to 10/16 */
+    font-size: 1vw;
+    width: 12vw;
+    height: 1.875vw; /* Equivalent to 30/16 */
+    border-radius: 0.625vw; /* Equivalent to 10/16 */
+    padding: 0.3125vw 0.625vw; /* Equivalent to 5/16 10/16 */
+    border: 0.0625vw solid #999;
+    cursor: pointer;
+  }
+  
+  button.submit-button {
+    margin-left: 1.25vw; /* Equivalent to 20/16 */
+    margin-right: 1.25vw; /* Equivalent to 20/16 */
+    margin-top: 2.5vw; /* Equivalent to 28/16 */
+    font-size: 1vw;
+    height: 1.875vw; /* Equivalent to 30/16 */
+    padding: 0.3125vw 0.625vw; /* Equivalent to 5/16 10/16 */
+    border-radius: 0.625vw; /* Equivalent to 10/16 */
+    border: 0.0625vw solid #999;
+    cursor: pointer;
+    background-color: black;
+    color: gold;
+  }
+@media (max-width: 600px)  {
+    .my-booking-card{
+        width:60vw;
+    }
+    .booking-card-header{
+        margin-left: 4vw;
+         font-size: 3vw;
+    }
+    .form-group {
+        margin-left: 3vw;
+        margin-top: 2vw; /* Equivalent to 15/16 */
+        font-size: 2.7vw;
+      }
+      .booking-card-select {
+        margin-top: 1.5vw; /* Equivalent to 10/16 */
+        font-size: 3vw;
+        width: 40vw;
+        height: 7vw; /* Equivalent to 30/16 */
+        border-radius: 1.5vw; /* Equivalent to 10/16 */
+        padding: 1 1.7vw; /* Equivalent to 5/16 10/16 */
+        border: 0.1vw solid #999;
+      }
+      .booking-card-input {
+        margin-top: 1.5vw; /* Equivalent to 10/16 */
+        font-size: 3vw;
+        width: 40vw;
+        height: 7vw; /* Equivalent to 30/16 */
+        border-radius: 1.5vw; /* Equivalent to 10/16 */
+        padding: 1 1.7vw; /* Equivalent to 5/16 10/16 */
+        border: 0.1vw solid #999;
+      }
+      button.submit-button {
+        margin-left: 4vw; /* Equivalent to 20/16 */
+        margin-right: 4vw; /* Equivalent to 20/16 */
+        margin-top: 4vw; /* Equivalent to 28/16 */
+        font-size: 3vw;
+        height: 5.5vw; /* Equivalent to 30/16 */
+        padding: 1vw 2vw; /* Equivalent to 5/16 10/16 */
+        border-radius: 1.5vw; /* Equivalent to 10/16 */
+        border: 0.1vw solid #999;
+      }
+}

@@ -1,0 +1,26 @@
+.facility-card-card{
+width: 18vw; cursor: auto;  border-top: 0.35vw solid red; box-shadow: 0 0 1.6vw solid red rgba(0, 0, 0, 0.6);
+}
+.facility-card-image{
+     width: 18vw; height: 12.5vw;
+}
+.facility-card-header{
+     font-weight: bold; text-align: center; font-size: 1vw; color: #8A3324;
+}
+.facility-card-content{
+   text-align: center;font-size: 0.8vw; margin-top: 0.32vw 
+}
+@media (max-width: 600px) {
+    .facility-card-card{
+        width: 40vw;  
+        }   
+        .facility-card-image{
+            width: 40vw; height: 40vw;
+       }
+       .facility-card-header{
+ font-size: 3vw; 
+   }
+   .facility-card-content{
+font-size: 2.5vw; margin-top: 1vw 
+ }
+}

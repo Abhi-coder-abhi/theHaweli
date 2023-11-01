@@ -117,18 +117,7 @@ const Header = () => {
       });
     setRegisterModalOpen(false);
   }
-  const headerStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: "center",// Pushes items to both ends
-    padding: "10px",
-  };
-  const contentContainerStyle = {
-    display: 'flex',
-  };
-  const buttonContainerStyle = {
-    display: 'flex',
-  };
+  
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);
   const navigate = useNavigate();
@@ -151,64 +140,71 @@ const Header = () => {
   //<div style={{ marginLeft: "30px", cursor: 'pointer' ,color:"#F0E68C"}} onClick={() => navigate('/')} >Home</div>
   return (
     <div>
-      <header className="fixed-header" >
-        <div style={headerStyle}>
-          <div style={contentContainerStyle}>
-
-            <div style={{ marginLeft: "1.25vw", cursor: 'pointer', fontSize: "1.25vw", color: "#F0E68C" }} onClick={() => navigate('/rooms')}>Rooms</div>
-            <div style={{ marginLeft: "1.25vw", cursor: 'pointer', fontSize: "1.25vw", color: "#F0E68C" }} onClick={() => navigate('/facilities')}>Facilities</div>
-            <div style={{ marginLeft: "1.25vw", cursor: 'pointer', fontSize: "1.25vw", color: "#F0E68C" }} onClick={() => navigate('/contactus')}>Contact Us</div>
-            <div style={{ marginLeft: "1.25vw", cursor: 'pointer', fontSize: "1.25vw", color: "#F0E68C" }} onClick={() => navigate('/about')}>About Us</div>
-            <div style={{ marginLeft: "1.25vw", cursor: 'pointer', fontSize: "1.25vw", color: "#F0E68C" }} onClick={() => navigate('/images')}>Photos</div>
-          </div>
-          <div style={buttonContainerStyle}>
-            <div style={{ color: "gold", fomtsize: "0.8vw", marginRight: "0.75vw" }}>
-            <WhatsApp style={{ fontSize: '0.9vw', marginTop: `${11 / 16}vw`, color: "gold", cursor: "pointer" }} />
-  <a style={{ fontSize: '1vw', cursor: "pointer", borderBottom: '2px solid gold' }} onClick={() => handleWhatsAppClick("+971890521")}>971890521</a>
+      <header className="fixed-header">
+        <div className="header-container">
+          <div className="header-content-container" >
+            <div className="header-link" onClick={() => navigate('/rooms')}>
+              Rooms
             </div>
-            <button style={{ marginRight: "0.75vw", fontSize: `${18 / 16}vw`, borderRadius: `${10 / 16}vw`, padding: `${10 / 16}vw ${10 / 16}vw`, cursor: 'pointer' }} onClick={openRegisterModal} disabled={loginStatus || registerStatus}>Register</button>
-            {loginStatus ? (
-
-              <span style={{ marginRight: "0.75vw", fontSize: `${24 / 16}vw`, borderRadius: `${10 / 16}vw`, padding: `${10 / 16}vw ${10 / 16}vw`, cursor: 'pointer' }}>👤</span>
-
-            ) : (
-              <button
-                style={{ marginRight: "1.9vw", fontSize: `${18 / 16}vw`, borderRadius: `${10 / 16}vw`, padding: `${10 / 16}vw ${10 / 16}vw`, cursor: 'pointer' }}
-                onClick={openLoginModal}
-                disabled={loginStatus}
-              >
-                Login
-              </button>
-            )}
-
-
+            <div className="header-link " onClick={() => navigate('/facilities')}>
+              Facilities
+            </div>
+            <div className="header-link " onClick={() => navigate('/contactus')}>
+              Contact Us
+            </div>
+            <div className="header-link " onClick={() => navigate('/about')}>
+              About Us
+            </div>
+            <div className="header-link " onClick={() => navigate('/images')}>
+              Photos
+            </div>
           </div>
-        </div>
-        <div style={{ fontSize: `${24 / 16}vw` }}>
-
-          <div style={{ position: "absolute", top: "0.6vw", left: "50%", transform: "translateX(-50%)", textAlign: "center", color: "#F0E68C", fontSize: `${24 / 16}vw`, fontWeight: "bold", cursor: "pointer", fontFamily: "cursive" }}
-            onClick={() => navigate('/')}>
-            <FontAwesomeIcon icon="fa-solid fa-hotel" /><a style={{ marginLeft: `${10 / 16}vw` }}>THE HAWELI</a><FontAwesomeIcon icon="fa-solid fa-hotel" style={{ marginLeft: `${10 / 16}vw` }} />
+          <div className="header-title">
+          <div
+            className="title"
+            onClick={() => navigate('/')}
+          >
+            <FontAwesomeIcon icon="fa-solid fa-hotel" />
+            <a style={{ marginLeft: '10px' }}>THE HAWELI</a>
+            <FontAwesomeIcon icon="fa-solid fa-hotel" style={{ marginLeft: '10px' }} />
           </div>
-          <div style={{ position: "absolute", top: "2.3vw", left: "50%", transform: "translateX(-50%)", textAlign: "center", color: "#F0E68C", fontSize: `${24 / 16}vw`, fontWeight: "bold", cursor: "pointer", fontFamily: "cursive" }}
-            onClick={() => navigate('/')}>
+          <div className="resort" onClick={() => navigate('/')}>
             Resort
           </div>
         </div>
-
-
+          <div className="button-container">
+            <div className="whatsapp-container">
+            <div className="whatsapp-icon"  onClick={() => handleWhatsAppClick('+971890521')} ><a style={{fontSize:"1px"}}><WhatsApp/></a></div>
+              <span className="whatsapp-number" onClick={() => handleWhatsAppClick('+971890521')}>
+                971890521
+              </span>
+            </div>
+            <button className="register-button" onClick={openRegisterModal} disabled={loginStatus || registerStatus}>
+              Register
+            </button>
+            {loginStatus ? (
+              <span className="user-icon">👤</span>
+            ) : (
+              <button className="login-button" onClick={() => openLoginModal()} disabled={loginStatus}>
+                Login
+              </button>
+            )}
+          </div>
+          
+        </div>
+        
       </header>
       {isLoginModalOpen && (
         <div className="modal">
-          <div className="modal-content" style={{ marginLeft: `${470/ 16}vw`, marginRight: `${470/ 16}vw`, marginTop: "20px" }}>
+          <div className="modal-content" >
             <form>
-              <div style={{ fontSize: '25px', fontWeight: "bold" }}> User Login</div>
+              <div className='login-modal-header'> User Login</div>
 
-              <div style={{ fontSize: '20px', marginTop: "20px" }}> Email ID</div>
-              <input style={{ fontSize: '18px', width: `${400/ 16}vw`, padding: "10px" }} type="text" onChange={handleLogin} name='loginemail' />
+              <div className='login-modal-lebel1'> Email ID</div>
+              <input className='login-modal-input'  type="text" onChange={handleLogin} name='loginemail' />
 
-              <div style={{ fontSize: '20px', marginTop: "10px" }} type="password" > Password</div>
-              <input style={{ fontSize: '18px', width: `${400/ 16}vw`, padding: "10px" }} type="password" onChange={handleLogin} name='loginpassword' />
+              <div className='login-modal-lebel2' type="password" > Password</div>
+              <input className='login-modal-input' type="password" onChange={handleLogin} name='loginpassword' />
               <div style={{ display: "flex", marginTop: "10px" }}>
                 <button style={{ fontSize: "20px", cursor: 'pointer' }} onClick={handleLoginSubmit}>Submit</button>
                 <button style={{ fontSize: "20px", marginLeft: "10px", cursor: 'pointer' }} onClick={closeLoginModal}>Cancel</button>

@@ -6,50 +6,43 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import RoomCard from '../components/roomCards';
 import { CardActionArea } from '@mui/material';
 import Chip from '@mui/material/Chip'
-
+import "../css/rooms.css"
 
 export default function Rooms() {
 
 
     return (
         <div style={{ overflowX: "hidden" }}>
-            <div style={{ marginTop: '6vw', marginBottom: '2.5%', fontSize: `${30 / 16}vw`, textAlign: 'center', fontWeight: "bold" }}>
-                <span style={{ borderBottom: "2px solid #B8860B", display: 'inline-block', fontFamily: "cursive", color: "#B8860B" }}>OUR ROOMS</span></div>
+            <div className='room-page-header'>
+                <span >OUR ROOMS</span></div>
 
-
-
-            <div style={{ marginRight: "15vw" }}>
+            <div className='room-page-booking-card'>
                 <BookingCard />
             </div>
 
 
-            <div style={{ marginTop: "5vw", marginLeft: "5vw" }}>
-                <div style={{ display: "flex" }}>
-                    <CardActionArea style={{ cursor: "auto" }}>
-                        <img style={{ width: "60vw", height: "41vw",  }} src={roomimage1} alt="" />
-
-                    </CardActionArea>
-                    <div style={{ marginTop: "1vw", marginRight: "6vw" }}><RoomCard /></div>
-                </div>
-                <div style={{ display: "flex" }}>
-                <div style={{marginTop:"6vw"  }}><RoomCard /></div>
-                    <div style={{ marginTop: '5vw' }}>
-                        <CardActionArea style={{ cursor: "auto", marginLeft: "2.7vw" }}>
-                            <img style={{ width: "60vw", height: "41vw", }} src={roomimage2} alt="" />
-
+            <div className='room-page-body'>
+                <div className="room-container">
+                    <div className="room-page-card-area">
+                        <CardActionArea style={{ cursor: "auto" }}>
+                            <img className="room-page-card-image" src={roomimage1} alt="" />
+                        </CardActionArea>
+                        <div className="room-page-room-card"><RoomCard /></div>
+                    </div>
+                    <div className="room-page-card-area room-page-section-spacing">
+                        <div className="room-page-room-card"><RoomCard /></div>
+                        <CardActionArea style={{ cursor: "auto" }}>
+                            <img className="room-page-card-image" src={roomimage2} alt="" />
                         </CardActionArea>
                     </div>
-                   
+                    <div className="room-page-card-area room-page-section-spacing">
+                        <CardActionArea style={{ cursor: "auto" }}>
+                            <img className="room-page-card-image" src={roomimage1} alt="" />
+                        </CardActionArea>
+                        <div className="room-page-room-card"><RoomCard /></div>
+                    </div>
                 </div>
-                <div style={{ display: "flex" }}>
-                <div style={{ marginTop: '5vw' }}>
-                    <CardActionArea style={{ cursor: "auto" }}>
-                        <img style={{ width: "60vw", height: "41vw",}} src={roomimage1} alt="" />
 
-                    </CardActionArea>
-                </div>
-                <div style={{ marginTop: "6vw", marginRight: "6vw" }}><RoomCard /></div>
-                </div>
             </div>
 
 

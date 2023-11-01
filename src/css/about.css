@@ -1,0 +1,153 @@
+/* Styles for the heading "About Director" */
+.about-page-director-heading {
+    margin-top: 7vw;
+    margin-bottom: 3vw;
+    font-size: 1.99vw;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .about-page-director-heading span {
+    border-bottom: 2px solid #B8860B;
+    display: inline-block;
+    font-family: cursive;
+    color: #B8860B;
+  }
+  
+  /* Styles for the director's description */
+  .about-page-director-description {
+    margin-top: 0.1%;
+    font-size: 1.125vw; /* Adjust the font size as needed */
+    text-align: center;
+    color: #990033;
+  }
+  
+  /* Styles for the "Story Of Haweli Resort" section */
+  .about-page-story-section {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-page-story-heading {
+    margin-top: 40vh;
+    margin-left: 10vw;
+    font-size: 2.1875vw; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+  
+  .about-page-story-coming-soon {
+    margin-top: 2vh;
+    margin-left: 10vw;
+    font-size: 1.5vw; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+  
+  .about-page-story-image {
+    margin-top: 6vw;
+    margin-left: 20vw;
+    width: 40vw;
+  }
+  /* Container for the four cards */
+.about-page-card-container {
+    display: flex;
+    margin-top: 5vw;
+    margin-left: 3vw;;
+  }
+  
+  /* Individual card style */
+  .about-page-card {
+    width: 22vw;
+    margin-left: 1vw;
+    height: 28vh;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    border-top: 4px solid orange;
+  }
+  
+  /* Card content style */
+  .about-page-card-content {
+    background-color: lightyellow;
+    height: 100%;
+    box-shadow: none;
+    text-align: center;
+  }
+  
+  /* Image style */
+  .about-page-card-image {
+    width: 7vw;
+    height: 5vw;
+    margin-top: 2.4vw;
+  }
+  
+  /* Card content text style */
+  .about-page-card-text {
+    margin-top: 0; /* Adjust as needed */
+    font-size: 1.625vw; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+  @media (max-width: 600px) {
+    .about-page-director-heading {
+        margin-top: 40vw;
+        margin-bottom: 4vw;
+        font-size: 6vw;
+      }
+      .about-page-director-description {
+        font-size: 3.5vw; /* Adjust the font size as needed */
+      }
+      .about-page-story-section {
+        flex-direction: column;
+      }
+      
+      .about-page-story-heading {
+        margin-top: 5vw;
+        margin-left: 23vw;
+        font-size: 5vw; 
+      }
+      
+      .about-page-story-coming-soon {
+        margin-top: 1vw;
+        margin-left: 33vw;
+        font-size: 5vw; 
+      }
+      .about-page-story-image {
+        margin-top: 6vw;
+        margin-left: 20vw;
+        width: 60vw;
+      }
+      .about-page-card-container {
+        margin-top: 12vw;
+        margin-left: 10vw;
+        flex-direction: column;
+      }
+      
+      /* Individual card style */
+      .about-page-card {
+        width: 50vw;
+        margin-left: 14vw;
+        height: 30vw;
+        box-shadow: 0 0 1.6vw rgba(0, 0, 0, 0.6);
+        border-top: 4px solid orange;
+        margin-top:3vw;
+      }
+      
+      /* Card content style */
+      .about-page-card-content {
+        background-color: lightyellow;
+        height: 100%;
+        box-shadow: none;
+        text-align: center;
+      }
+      
+      /* Image style */
+      .about-page-card-image {
+        width: 20vw;
+        height: 15vw;
+        margin-top: 5vw;
+      }
+      
+      /* Card content text style */
+      .about-page-card-text {
+        margin-top: 0vw; /* Adjust as needed */
+        font-size: 4.5vw; /* Adjust the font size as needed */
+        font-weight: bold;
+      }
+  }

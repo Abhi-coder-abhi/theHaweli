@@ -1,0 +1,105 @@
+.facility-page-header{
+    margin-top: 7.5vw; font-size: 2vw; text-align: center; font-weight: bold;
+}
+.facility-page-header span{
+     border-bottom: 2px solid #B8860B; display: inline-block;font-family: cursive;color:#B8860B;
+}
+.facility-page-description{
+     margin-top: 1vw; font-size: 1.12vw; text-align: center;color:#990033;
+}
+.facility-page-description2{
+    margin-top: 0.2vw; margin-bottom: 3.1px; font-size: 1.12vw; text-align: center;color:#990033;
+}
+.facility-page-facility-row{
+     margin-top: 5vw; margin-left: 5vw;display: flex;
+}
+  
+  .facility-page-card {
+    width: 25.5vw; /* Set your width here */
+    height: 11.25vw; /* Set your height here */
+    border-radius: 0.6vw;
+    padding: 1.25vw;
+    border-top: 5px solid #F0E68C;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  }
+  
+  .facility-page-card img {
+    width: 6.25vw; /* Set your width here */
+    height: 5.52vw; /* Set your height here */
+  }
+  .facility-page-card-margin {
+ margin-left: 2.5vw;
+ width: 25.5vw; /* Set your width here */
+ height: 11.25vw; /* Set your height here */
+ border-radius: 0.6vw;
+ padding: 1.25vw;
+ border-top: 5px solid #F0E68C;
+ box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  }
+  .facility-page-card-margin img {
+    width: 6.25vw; /* Set your width here */
+    height: 5.52vw; /* Set your height here */
+  }
+  
+  .facility-page-card-title {
+    font-size: 1.25vw; /* Set your font size here */
+    font-weight: bold;
+    margin-top: 0.6vw;
+    color: #8A3324;
+  }
+  
+  .facility-page-card-description {
+    font-size: 1vw; /* Set your font size here */
+    margin-top: 0.6vw;
+    color: #333366;
+  }
+  @media (max-width: 600px) {
+    .facility-page-header{
+        margin-top: 40vw; font-size: 7vw;
+    }
+    .facility-page-description{
+        margin-top: 3vw; font-size: 4vw; 
+   }
+   .facility-page-description2{
+    margin-top: 0.5vw; margin-bottom: 0.6vw; font-size: 4vw; 
+}
+.facility-page-facility-row{
+    margin-top: 15vw; margin-left: 10vw;display: flex;flex-direction: column;
+}
+.facility-page-card {
+    width: 75vw; /* Set your width here */
+    height: 35vw; /* Set your height here */
+    border-radius: 1.5vw;
+    padding: 4vw;
+    border-top: 5px solid #F0E68C;
+    box-shadow: 0 0 4.5vw rgba(0, 0, 0, 0.6);
+  }
+  .facility-page-card-margin img {
+    width: 20vw; /* Set your width here */
+    height: 18vw; /* Set your height here */
+  }
+  .facility-page-card-margin {
+    width: 75vw; /* Set your width here */
+    height: 35vw; /* Set your height here */
+    border-radius: 1.5vw;
+    padding: 4vw;
+    border-top: 5px solid #F0E68C;
+    box-shadow: 0 0 4.5vw rgba(0, 0, 0, 0.6);
+    margin-left: 0vw;
+    margin-top: 10vw;
+  }
+  .facility-page-card img {
+    width: 20vw; /* Set your width here */
+    height: 18vw; /* Set your height here */
+  }
+  .facility-page-card-title {
+    font-size: 4vw; 
+    margin-top: 2vw;
+  }
+  
+  .facility-page-card-description {
+    font-size: 3vw; /* Set your font size here */
+    margin-top: 2vw;
+  }
+  }
+  

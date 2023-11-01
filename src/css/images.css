@@ -1,0 +1,102 @@
+.image-page-header {
+  margin-top: 7.5vw;
+  font-size: 2vw;
+  text-align: center;
+  font-weight: bold;
+}
+
+.image-page-header span {
+  border-bottom: 2px solid #B8860B;
+  display: inline-block;
+  font-family: cursive;
+  color: #B8860B;
+}
+
+.image-page-image-row {
+  margin-top: 5vw;
+  margin-left: 10vw;
+  display: flex;
+}
+
+.image-page-card {
+  width: 20vw;
+  /* Set your width here */
+  height: 12.5vw;
+  /* Set your height here */
+  border-radius: 0.6vw;
+  padding: 1.25vw;
+  border: 5px solid #F0E68C;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.image-page-card img {
+  width: 20vw;
+  /* Set your width here */
+  height: 13vw;
+  /* Set your height here */
+}
+
+.image-page-card-margin {
+  margin-left: 5vw;
+  width: 20vw;
+  /* Set your width here */
+  height: 12.5vw;
+  /* Set your height here */
+  border-radius: 0.6vw;
+  padding: 1.25vw;
+  border: 5px solid #F0E68C;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.image-page-card-margin img {
+  width: 20vw;
+  /* Set your width here */
+  height: 13vw;
+  /* Set your height here */
+}
+
+@media (max-width: 600px) {
+  .image-page-header {
+    margin-top: 40vw;
+    font-size: 7vw;
+  }
+
+  .image-page-image-row {
+    margin-top: 15vw;
+    margin-left: 15vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-page-card {
+    width: 60vw;
+    height: 50vw;
+    border-radius: 1.5vw;
+    padding: 4vw;
+    border: 1vw solid #F0E68C;
+    box-shadow: 0 0 5vw rgba(0, 0, 0, 0.6);
+  }
+
+  .image-page-card-margin img {
+    width: 60vw;
+    height: 50vw;
+  }
+
+  .image-page-card-margin {
+    width: 60vw;
+    height: 50vw;
+    border-radius: 1.5vw;
+    padding: 4vw;
+    border: 1vw solid #F0E68C;
+    box-shadow: 0 0 5vw rgba(0, 0, 0, 0.6);
+    margin-top: 10vw;
+    margin-left: 0vw;
+  }
+
+  .image-page-card img {
+    width: 60vw;
+    height: 50vw;
+
+  }
+
+}

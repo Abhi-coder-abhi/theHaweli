@@ -1,0 +1,259 @@
+.contact-page-header {
+    margin-top: 7.5vw;
+    font-size: 2vw;
+    text-align: center;
+    font-weight: bold;
+  }
+  .contact-page-container{
+    display:flex;
+  }
+  .contact-page-message-card {
+    width: 43.75vw; /* 700/16 */
+    height: 62.5vw; /* 1000/16 */
+    margin-top: 5vw; /* 80/16 */
+    margin-left: 2.5vw; /* 40/16 */
+    margin-right: 1.25vw; /* 20/16 */
+    border: 5px solid #F0E68C;
+  }
+  
+  .contact-page-message-form {
+    padding-left: 1.5625vw; /* 25/16 */
+  }
+  
+  .contact-page-message-header {
+    font-size: 1.5vw; /* 24/16 */
+    margin-top: 1.875vw; /* 30/16 */
+    font-weight: bold;
+    color: #CC9900;
+    font-family: cursive;
+  }
+  
+  .contact-page-form-label {
+    font-size: 1.25vw; /* 20/16 */
+    margin-top: 1.25vw; /* 20/16 */
+    font-weight: bold;
+    color: #8A3324;
+  }
+  
+  .contact-page-input-field {
+    height: 35px;
+    margin-top: 0.3125vw; /* 5/16 */
+    width: 37.5vw; /* 600/16 */
+    font-size: 1vw;
+  }
+  
+  .contact-page-text-area {
+    height: 6.25vw; /* 100/16 */
+    margin-top: 0.3125vw; /* 5/16 */
+    width: 36.875vw; /* 590/16 */
+    font-size: 0.875vw; /* 14/16 */
+    padding: 0.625vw; /* 10/16 */
+  }
+  
+  .contact-page-submit-button {
+    font-size: 1.125vw; /* 18/16 */
+    margin-top: 1.25vw; /* 20/16 */
+    padding: 0.3125vw; /* 5/16 */
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid #8A3324;
+    border-radius: 0.3125vw; /* 5/16 */
+    font-weight: bold;
+    background-color: #F0E68C;
+    color: #8A3324;
+  }
+  .contact-page-map-card {
+    width: 43.75vw; 
+    margin-top: 5vw;
+    margin-left: 3.75vw;
+    border: 5px solid #F0E68C;
+    margin-bottom: 5vw;
+  }
+  .contact-page-map-form{
+ height: 25vw;
+  flex: 1;
+  }
+  .contact-page-contact-form{
+padding-left: 1.25vw; margin-top: 3.75vw ;
+     }
+     .contact-page-contact-address {
+      font-size: 1.25vw; /* 20/16 */
+    }
+    
+    .contact-page-contact-title {
+      font-size: 1.25vw; /* 20/16 */
+      font-weight: bold;
+      color: #8A3324;
+      margin-top: 0.625vw; /* 10/16 */
+    }
+    
+    .contact-page-contact-address-line {
+      display: flex;
+      font-size: 1vw;
+      margin-top: 0.3125vw; /* 5/16 */
+    }
+    
+    .contact-page-contact-sub-address {
+      font-size: 1vw;
+      margin-top: 0.3125vw; /* 5/16 */
+      color: #333366;
+    }
+    
+    .contact-page-contact-phone-line {
+      display: flex;
+      font-size: 1vw;
+      margin-top: 0.3125vw; /* 5/16 */
+      color: #333366;
+    }
+    
+    .contact-page-contact-icon-link {
+      font-size: 1vw;
+      margin-top: 0.625vw; /* 10/16 */
+    }
+    
+    .contact-page-contact-whatsapp-line {
+      display: flex;
+      font-size: 1vw;
+      margin-top: 0.3125vw; /* 5/16 */
+      color: #333366;
+    }
+    
+    .contact-page-contact-email-line {
+      display: flex;
+      font-size: 0.75vw; /* 12/16 */
+      color: #333366;
+      margin-top: 0.3125vw; /* 5/16 */
+    }
+    
+    .contact-page-contact-icon {
+      font-size: 1vw;
+      color: #333366;
+    }
+    
+    .contact-page-contact-text {
+      font-size: 1vw;
+    }
+    
+    .contact-page-contact-link {
+      font-size: 1vw;
+      color: #333366;
+    }
+    
+  @media (max-width: 600px) {
+    .contact-page-header {
+      margin-top: 40vw;
+      font-size: 7vw;
+    }
+    .contact-page-container{
+      flex-direction: column;
+    }
+    .contact-page-message-card {
+      width: 78vw; /* 700/16 */
+      height: 120vw; /* 1000/16 */
+      margin-top: 5vw; /* 80/16 */
+      margin-left: 8vw; /* 40/16 */
+      margin-right: 1.25vw; /* 20/16 */
+      border: 5px solid #F0E68C;
+    }
+    
+    .contact-page-message-form {
+      padding-left: 4vw; /* 25/16 */
+    }
+    
+    .contact-page-message-header {
+      font-size: 4.5vw;
+      margin-top: 5.7vw; 
+    }
+    
+    .contact-page-form-label {
+      font-size: 4vw; /* 20/16 */
+      margin-top: 4vw; /* 20/16 */
+    }
+    
+    .contact-page-input-field {
+      height: 6vw;
+      margin-top: 3vw; /* 5/16 */
+      width: 60vw; /* 600/16 */
+      font-size: 1vw;
+    }
+    
+    .contact-page-text-area {
+      height: 6vw; 
+      margin-top: 4vw; 
+      width: 57vw; /* 590/16 */
+      font-size: 2.5vw; /* 14/16 */
+      padding: 2vw; /* 10/16 */
+    }
+    
+    .contact-page-submit-button {
+      font-size: 3.5vw; /* 18/16 */
+      margin-top: 4vw; /* 20/16 */
+      padding: 1vw; /* 5/16 */
+      border-radius: 1vw; /* 5/16 */
+
+    }
+    .contact-page-map-card {
+      width: 78vw; 
+      margin-top: 12vw;
+      margin-left: 8vw;
+      margin-bottom: 0vw;
+    }
+    .contact-page-map-form{
+      height: 65vw;
+       }
+       .contact-page-contact-form{
+        padding-left: 4vw; margin-top: 10vw ;
+             }   
+             .contact-page-contact-address {
+              font-size: 4vw; /* 20/16 */
+            }
+            
+            .contact-page-contact-title {
+              font-size: 4vw; /* 20/16 */
+              margin-top: 2vw; /* 10/16 */
+            }
+            
+            .contact-page-contact-address-line {
+              font-size: 3vw;
+              margin-top: 1vw; /* 5/16 */
+            }
+            
+            .contact-page-contact-sub-address {
+              font-size: 3vw;
+              margin-top: 1vw; /* 5/16 */
+              margin-left: 5vw;
+            }
+            
+            .contact-page-contact-phone-line {
+              font-size: 3vw;
+              margin-top: 1vw; /* 5/16 */
+            }
+            
+            .contact-page-contact-icon-link {
+              font-size: 3vw;
+              margin-top: 2vw; /* 10/16 */
+            }
+            
+            .contact-page-contact-whatsapp-line {
+              font-size: 3vw;
+              margin-top: 1vw; /* 5/16 */
+            }
+            
+            .contact-page-contact-email-line {
+              font-size: 2.75vw; /* 12/16 */
+              margin-top: 1vw; /* 5/16 */
+            }
+            
+            .contact-page-contact-icon {
+              font-size: 6vw;
+            }
+            
+            .contact-page-contact-text {
+              font-size: 3vw;
+            }
+            
+            .contact-page-contact-link {
+              font-size: 3vw;
+            }
+            
+  }

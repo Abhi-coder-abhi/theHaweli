@@ -1,26 +1,20 @@
 /* HomePage.css */
 
 /* Style for the image slider section */
-.image-slider {
-    position: relative;
-  }
- .image-container{
-    
- }
+
  .main-image{
     width: 100vw;
     height:35vw
  } 
-  .image-slider img {
-    width: 100vw;
-    height: 36vw;
-    margin-top: 2.1875vw; /* 35px */
+  .image-container {
+    margin-top: 2.1875vw; 
   }
   
   .booking-card {
     position: absolute;
-    top: 33vw; /* 150px */
+    top: 35vw; /* 150px */
     background-color: transparent;
+    margin-left: 6vw;
   }
   
   .logo {
@@ -51,7 +45,7 @@ cursor: pointer;
   }
   .our-rooms-title {
     margin-top: 14vw;
-    margin-bottom: 2.5%;
+    margin-bottom: 2.5vw;
     font-size: 1.875vw; /* Equivalent to 30/16vw */
     text-align: center;
     font-weight: bold;
@@ -65,7 +59,7 @@ cursor: pointer;
   }
   .title-page {
     margin-top: 4vw;
-    margin-bottom: 2.5%;
+    margin-bottom: 2.5vw;
     font-size: 1.875vw; /* Equivalent to 30/16vw */
     text-align: center;
     font-weight: bold;
@@ -100,126 +94,248 @@ cursor: pointer;
   /* Styling for "OUR FACILITIES" section */
   .facilities-section {
     display: flex;
-    height: 20vw;
-    margin-left: 5.625vw; /* 90px */
+    margin-left: 0vw; /* 90px */
+    flex-wrap: wrap; 
   }
   
   .facility-card {
-    width: 10%;
+    margin-left: 6.125vw;
+    margin-top: 2vw;
   }
-  
+  .space{
+    margin-left: 0.5vw;
+  }
   /* Additional Facility Cards should have specific class names */
-  .facility-card:nth-child(2n) {
-    margin-left: 3.125vw; /* 50px */
-  }
+
   
   /* Styling for "MORE FACILITIES" button */
   .more-facilities-button {
     text-align: center;
-    margin-top: 1.25vw; /* 20px */
+    margin-top: 3.25vw; /* 20px */
   }
   
   .more-facilities-button button {
-    font-size: 1vw;
-    padding: 0.625vw; /* 10px */
+    font-size: 1.2vw;
+    padding: 0.8vw; /* 10px */
     cursor: pointer;
     border: 0.125vw solid #8A3324;
     border-radius: 0.625vw; /* 10px */
     font-weight: bold;
     background-color: black;
     color: gold;
-    width: 4.375vw; /* 70px */
-    height: 1.5625vw; /* 25px */
+
   }
   
   /* Styling for "TESTIMONIALS" section */
   .testimonials-section {
     display: flex;
-    margin-left: 5.625vw; /* 90px */
+    
     margin-top: 5vw;
+    flex-wrap: wrap; 
   }
   
-  .testimonial-card {
-    width: 20%;
-  }
   
   /* Styling for "Hotel Services" section */
   .hotel-services-section {
     display: flex;
     margin-top: 5.625vw; /* 90px */
   }
+  .services-container {
+    display: flex;
+    margin-top: 1vw;
+    align-items: center;
+    flex-wrap: wrap; 
+  }
   
   .service {
+    text-align: center;
+    margin-left: 11vw;
+  }
+  
+  .service-icon {
     font-size: 4vw;
-    margin-left: 2.5vw; /* 40px */
     color: #8A3324;
   }
   
   .service-title {
-    margin-top: 1.25vw; /* 20px */
+    margin-top: 1vw;
     font-weight: bold;
-    font-size: 1.5625vw; /* 25px */
-    margin-left: 2.5vw; /* 40px */
+    font-size: 1.5vw;
     color: #8A3324;
   }
   
   .service-description {
-    width: 8.125vw; /* 130px */
-    text-align: center;
-    margin-top: 1.25vw; /* 20px */
-    margin-left: 4.0625vw; /* 65px */
+    width: 18vw;
+    margin-top: 1vw;
+    font-size: 1.2vw;
   }
+  
   
   /* Styling for "REACH US" section */
   .reach-us-section {
     display: flex;
     margin-left: 5.625vw; /* 90px */
     margin-bottom: 3.125vw; /* 50px */
+    flex-wrap: wrap;
   }
   
-  .map-card {
-    width: 40%;
-  }
   
-  .contact-info {
-    margin-left: 34.375vw; /* 550px */
-  }
+  .contact-details {
+  margin-left: 4.375vw; 
+}
+
+.contact-title {
+  font-size: 1.25vw;
+  font-weight: bold;
+  color: #8A3324;
+}
+
+.phone-numbers {
+  display: flex;
+  font-size: 1vw;
+  margin-top: 0.625vw;
+  align-items: center;
+}
+
+.phone-icon {
+  font-size: 1vw;
+}
+
+.phone-number {
+  font-size: 1vw;
+}
+
+.social-title {
+  margin-top: 7vw;
+  font-size: 1.25vw;
+  font-weight: bold;
+  color: #8A3324;
+}
+
+.social-media-links {
   
-  .call-us {
-    font-size: 1.5625vw; /* 25px */
-    font-weight: bold;
-    color: #8A3324;
-    margin-top: 2.5vw; /* 40px */
-  }
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media-link {
+    margin-top: 0.625vw;
+  margin-right: 0.625vw;
+}
+
+.social-media-link a {
+  color: gold;
+  font-size: 1.125vw;
+  font-weight: bold;
+}
+
+.social-media-link a:hover {
+  text-decoration: underline;
   
-  .phone-icons {
-    display: flex;
-    font-size: 1vw;
-    margin-top: 1.5625vw; /* 25px */
-  }
-  
-  .phone-icon {
-    font-size: 1vw;
-  }
-  
-  .follow-us {
-    font-size: 1.25vw; /* 20px */
-    font-weight: bold;
-    color: #8A3324;
-    margin-top: 1.5625vw; /* 25px */
-  }
-  
-  .social-media-links {
-    margin-top: 1.5625vw; /* 25px */
-  }
-  
-  .social-media-link {
-    font-size: 1.125vw; /* 18px */
-    font-weight: bold;
-    background-color: black;
-    color: gold;
-  }
-  
+}
+
+
   /* Additional Social Media Links should have specific class names */
-  
+  @media (max-width: 600px)  {
+    .image-slider img {
+     top: 10vw; /* 35px */
+      }
+      .rooms-section {
+        flex-direction: column;
+           align-items: center;
+    
+      }
+      .room-card{
+        justify-items: center;
+        justify-content: center;
+        margin-right: 17vw;
+      }
+      .image-card{
+        margin-left: 7vw;
+        margin-top: 5vw;
+      }
+      .more-facilities-button button {
+        font-size: 2vw;
+      }
+      .title-page {
+        font-size: 5vw; /* Equivalent to 30/16vw */
+      }
+      .our-rooms-title {
+        font-size: 5vw;
+        margin-top: 80vw;
+      }
+      .service-icon {
+        font-size: 10vw;
+        
+      }
+      .service-title {
+        margin-top: 3vw;        
+        font-size: 4vw;
+        
+      }
+      .service-description {
+        margin-top: 1vw;
+        font-size: 3vw;
+        width: 50vw;
+      }
+      .service {
+        margin-left: 30vw;
+      }
+      .reach-us-section {
+        display: flex;
+       flex-direction: column;
+      }
+      .contact-details {
+        font-size: 1vw;  
+      }
+      .contact-title {
+        font-size: 5vw;
+        margin-top: 7vw;
+      }
+      .phone-numbers {
+        font-size: 3vw;
+        margin-top: 2vw;
+        left: 5vw;
+      }
+      .phone-icon {
+        font-size: 3vw;
+      }
+      
+      .phone-number {
+        font-size: 3vw;
+      }
+      
+      .social-title {
+        margin-top: 7vw;
+        font-size: 1.25vw;
+      }
+      .space{
+        margin-left: 2vw;
+      }
+      .social-title {
+        margin-top: 7vw;
+        font-size: 5vw;
+      }
+    .social-media-link a {
+        font-size: 3vw; 
+  }
+  .social-media-links {
+    flex-direction: row;
+    left: 10vw;
+  }
+  .booking-card {
+    top: 60vw; 
+    margin-left: 20vw;
+  }
+  .main-image{
+    height: 40vw;
+ } 
+ .image-container {
+    margin-top: 35vw; 
+  }
+  .reach-us-section{
+    margin-left: 10vw;
+  }
+
+}
   

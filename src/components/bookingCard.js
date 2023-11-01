@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { useMediaQuery } from '@mui/material';
+import "../css/booking.css"
 
 export default function BookingCard() {
     const [checkInDate, setCheckInDate] = useState('');
@@ -10,7 +11,7 @@ export default function BookingCard() {
     const [children, setChildren] = useState("");
     const email = localStorage.getItem('email');
     const [type, setType] = useState("single");
-    
+
     console.log("b", email)
 
 
@@ -37,90 +38,64 @@ export default function BookingCard() {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        
-            // If email is not present, show a warning to log in first
-            alert('Room is Available Now');
-            // You can also navigate to the login page or take other actions as needed
-        }
-        const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-    
+
+        // If email is not present, show a warning to log in first
+        alert('Room is Available Now');
+        // You can also navigate to the login page or take other actions as needed
+    }
+
+
     return (
         <Card
-      sx={{ width: '85vw', marginLeft: '8vw', height: '10vw' }}
-      style={{
-        borderRadius: '15px',
-        backgroundColor: 'rgba(255, 255, 150, 0.5)',
-        // Apply styles only for mobile screens
-        ...(isMobile && {
-          width: '100%',
-          marginLeft: '0',
-          // Add more mobile-specific styles here
-        }),
-      }}
-    >
+        className='my-booking-card ' style={{backgroundColor: "rgba(255, 255, 150, 0.5)"}}
+        >
             <CardContent>
-                <h2 style={{ marginLeft: "1.5vw", color: "#8A3324", fontSize: "1vw" }}>Check Booking Availability</h2>
-                <div style={{ display: 'flex' }}>
+                <h2 className='booking-card-header'>Check Booking Availability</h2>
+                <div className="form-container">
                     <div>
-                        <div style={{ marginLeft: "1.8vw", marginTop: `${15 / 16}vw`, fontSize: '1vw', fontWeight: 'bold', }}>Check-in</div>
-                        <input type="date" id="checkInDate" style={{ marginLeft: "1.5vw", marginTop: `${10 / 16}vw`, fontSize: '1vw', width: '13vw', height: `${30 / 16}vw`, borderRadius: `${10 / 16}vw`, padding: `${5 / 16}vw ${10 / 16}vw`, border: `${1 / 16}vw solid #999` }} onChange={changeHandler} name="from" />
-                        <style>
-                            {`
-                                  input[type="date"]::-webkit-calendar-picker-indicator {
-                                    cursor: pointer;
-                                     }
-                            `}
-                        </style>
+                        <div className="form-group">
+                            <label className='.booking-card-label'>Check-in</label>
+                            <input className='booking-card-input' type="date" id="checkInDate" name="from" onChange={changeHandler}/>
+                        </div>
                     </div>
                     <div>
-                        <div style={{ marginLeft: `${20 / 16}vw`, marginTop: `${15 / 16}vw`, fontSize: `${16 / 16}vw`, fontWeight: 'bold' }}>Check-out</div>
-                        <input type="date" id="checkOutDate" style={{ marginLeft: `${20 / 16}vw`, marginTop: `${10 / 16}vw`, fontSize: '1vw', width: '13vw', height: `${30 / 16}vw`, borderRadius: `${10 / 16}vw`, padding: `${5 / 16}vw ${10 / 16}vw`, border: `${1 / 16}vw solid #999` }} onChange={changeHandler} name="to" />
+                        <div className="form-group">
+                            <label className='.booking-card-label'>Check-out</label>
+                            <input className='booking-card-input' type="date" id="checkOutDate" name="to" onChange={changeHandler}/>
+                        </div>
                     </div>
                     <div>
-                        <div style={{ marginLeft: `${20 / 16}vw`, marginTop: `${15 / 16}vw`, fontSize: '1vw', fontWeight: 'bold' }}>Adult</div>
-                        <select
-                            id="adult"
-                            style={{
-                                marginLeft: `${20 / 16}vw`, marginTop: `${10 / 16}vw`, fontSize: '1vw', width: '13vw', height: `${40 / 16}vw`, borderRadius: `${10 / 16}vw`, padding: `${10 / 16}vw`, border: '1px solid #999', cursor: "pointer"
-                            }}
-                            onChange={changeHandler} name="adult"
-                        >
-                            <option value="one">One</option>
-                            <option value="two">Two</option>
-                            <option value="three">Three</option>
-                        </select>
+                        <div className="form-group">
+                            <label className='.booking-card-label'>Adult</label>
+                            <select className='booking-card-select' id="adult" name="adult" onChange={changeHandler}>
+                                <option value="one">One</option>
+                                <option value="two">Two</option>
+                                <option value="three">Three</option>
+                            </select>
+                        </div>
                     </div>
                     <div>
-                        <div style={{ marginLeft: `${20 / 16}vw`, marginTop: `${15 / 16}vw`, fontSize: '1vw', fontWeight: 'bold' }}>Children</div>
-                        <select
-                            id="children"
-                            style={{
-                                marginLeft: `${20 / 16}vw`, marginTop: `${10 / 16}vw`, fontSize: '1vw', width: '13vw', height: `${40 / 16}vw`, borderRadius: `${10 / 16}vw`, padding: `${5 / 16}vw ${10 / 16}vw`, border: '1px solid #999', cursor: "pointer"
-                            }}
-                            onChange={changeHandler} name="children"
-                        >
-                            <option value="one">One</option>
-                            <option value="two">Two</option>
-                            <option value="three">Three</option>
-                        </select>
+                        <div className="form-group">
+                            <label className='.booking-card-label'>Children</label>
+                            <select className='booking-card-select' id="children" name="children" onChange={changeHandler}>
+                                <option value="one">One</option>
+                                <option value="two">Two</option>
+                                <option value="three">Three</option>
+                            </select>
+                        </div>
                     </div>
                     <div>
-                        <div style={{ marginLeft: `${20 / 16}vw`, marginTop: `${15 / 16}vw`, fontSize: '1vw', fontWeight: 'bold' }}>Type</div>
-                        <select
-                            id="type"
-                            style={{
-                                marginLeft: `${20 / 16}vw`, marginTop: `${10 / 16}vw`, fontSize: '1vw', width: '13vw', height: `${40 / 16}vw`, borderRadius: `${10 / 16}vw`, padding: `${5 / 16}vw ${10 / 16}vw`, border: '1px solid #999', cursor: "pointer"
-                            }}
-                            onChange={changeHandler} name="type"
-                        >
-                            <option value="single">Single Bed</option>
-                            <option value="double">Double Bed</option>
-                            <option value="triple">Triple Bed</option>
-                        </select>
+                        <div className="form-group">
+                            <label className='.booking-card-label'>Type</label>
+                            <select className='booking-card-select' id="type" name="type">
+                                <option value="single">Single Bed</option>
+                                <option value="double">Double Bed</option>
+                                <option value="triple">Triple Bed</option>
+                            </select>
+                        </div>
                     </div>
                     <div>
-                        <div style={{ marginLeft: `${20 / 16}vw`, marginTop: '1vw', fontSize: '1vw', fontWeight: 'bold' }}></div>
-                        <button style={{ marginLeft: `${20 / 16}vw`, marginRight: `${20 / 16}vw`, marginTop: `${28 / 16}vw`, fontSize: '1vw', height: `${40 / 16}vw`, padding: `${5 / 16}vw ${10 / 16}vw`, borderRadius: `${10 / 16}vw`, border: `${1 / 16}vw solid #999`, cursor: "pointer", backgroundColor: "black", color: "gold", }} onClick={handleFormSubmit}>Submit</button>
+                        <button className="submit-button" onClick={handleFormSubmit}>Submit</button>
                     </div>
                 </div>
             </CardContent>

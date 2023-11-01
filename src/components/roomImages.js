@@ -27,11 +27,8 @@ export default function RoomImages() {
     }, []);
 
     return (
-        <Card style={{ width: '50%', marginLeft: '23%', height: '46vw', backgroundColor: 'lightyellow',  }}>
+        <Card style={{ width: '40vw', height: '44vw', backgroundColor: 'lightyellow',  }}>
             <img style={{ width: '100%', height: '100%' }} src={currentImage} alt="Room Image" />
-            <CardActionArea style={{ cursor: 'auto', marginLeft: '7vh' }}>
-                
-            </CardActionArea>
         </Card>
     );
 }

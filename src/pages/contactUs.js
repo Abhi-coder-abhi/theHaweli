@@ -3,16 +3,16 @@ import { Card } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MailIcon from '@mui/icons-material/Mail';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import Chip from '@mui/material/Chip';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
-
+import { MdLocationOn } from 'react-icons/md';
+import "../css/contactus.css"
 export default function ContactUs() {
     return (
         <div>
-            <div style={{ marginTop:  `${120 / 16}vw`, marginBottom: `${50 / 16}vw`, fontSize: `${30 / 16}vw`, textAlign: 'center', fontWeight: "bold" }}><span style={{ borderBottom: "2px solid #B8860B", display: 'inline-block',fontFamily: "cursive",color:"#B8860B"}}>CONTACT US</span></div>
-            <div style={{ display: "flex" }}>
-                <Card style={{ width: `${700 / 16}vw`, marginTop: `${80 / 16}vw`, marginLeft: `${60 / 16}vw`,border:"5px solid #F0E68C",height: `${1000 / 16}vw` }}>
-                    <div style={{ height:  `${400 / 16}vw`, flex: '1' }}>
+            <div className='contact-page-header'><span style={{ borderBottom: "2px solid #B8860B", display: 'inline-block', fontFamily: "cursive", color: "#B8860B" }}>Contact Us</span></div>
+            <div className='contact-page-container'>
+                <Card className='contact-page-map-card'>
+                    <div className='contact-page-map-form'>
                         <div
                             id="map-container-google-1"
                             className="z-depth-1-half map-container"
@@ -26,72 +26,71 @@ export default function ContactUs() {
                             ></iframe>
                         </div>
                     </div>
-                    <div style={{ paddingLeft:`${20 / 16}vw`, marginTop: `${60 / 16}vw` }}>
-                        <div style={{ fontSize: `${20 / 16}vw`, fontWeight: 'bold',color: "#8A3324" }}>Address</div>
-                        <div style={{ display: 'flex', fontSize: '1vw', marginTop: `${10 / 16}vw` }}>
-                            <PhoneIcon style={{ fontSize: '1vw' }} />
-                            <div style={{ fontSize: '1vw',color:"#333366"  }}> Plot No - 303 , Narbdeshwar Nagar , Bharthauli Road , Jasoiya More </div>
-                        </div>
-                        <div style={{ fontSize: '1vw', marginTop: `${5/ 16}vw`,color:"#333366"  }}> Aurangabad ( Bihar)- 824101 </div>
-                        <div style={{ fontSize: `${20 / 16}vw`, fontWeight: 'bold', marginTop: `${30 / 16}vw`,color: "#8A3324" }}>Call Us</div>
-                        <div style={{ display: 'flex', fontSize: '1vw', marginTop: `${10 / 16}vw`,color:"#333366"  }}>
-                            <PhoneIcon style={{ fontSize: '1vw' }} />+91971890521
-                            <PhoneIcon style={{ fontSize: '1vw', marginLeft:`${10 / 16}vw` }} />+918789618100
-                        </div>
-                        <PhoneIcon style={{ fontSize: '1vw', marginTop: `${10 / 16}vw`,color:"#333366"  }} /><a style={{ fontSize: '1vw' }}>+91971890521</a>
-                        <div style={{ marginTop: `${30 / 16}vw` }}>
-                            <div style={{ fontSize: `${20 / 16}vw`, fontWeight: 'bold',color: "#8A3324" }}>Whatsapp</div>
-                        </div>
-                        <div style={{ marginTop: `${10 / 16}vw`, display: "flex", }}>
-                            <div >
-                                <WhatsAppIcon style={{ fontSize: "1vw" ,color:"#333366" }}/>
-                            </div>
-                            <p style={{ fontSize: '1vw' }}>+919718905221</p>
-                        </div>
-                        <div style={{ marginTop: `${20 / 16}vw` }}>
-                            <div style={{ fontSize: `${20 / 16}vw`, fontWeight: 'bold',color: "#8A3324" }}>Email</div>
-                        </div>
-                        <div style={{ marginTop: `${10 / 16}vw`, display: "flex", }}>
-                            <div style={{ fontSize: `${12/ 16}vw`,color:"#333366"  }}>
-                                <MailIcon style={{ fontSize: "1vw"  }}/>
-                            </div>
-                            <p style={{ fontSize: '1vw',color:"#333366"  }}>info@haweli.com</p>
-                        </div>
-                        
-                        <div style={{ fontSize: `${20 / 16}vw`, fontWeight: 'bold', marginTop: `${20 / 16}vw`,color: "#8A3324" }}>Follow Us</div>
-                        <div style={{ marginTop: `${10 / 16}vw`, display: "flex", paddingBottom: "20px",color:"#333366"  }}>
+                    <div className='contact-page-contact-form'><div className="address">
+  <div className="contact-page-contact-title">Address</div>
+  <div className="contact-page-contact-address-line">
+    <MdLocationOn className="contact-page-contact-icon" />
+    <div className="contact-page-contact-text">Plot No - 303 , Narbdeshwar Nagar , Bharthauli Road , Jasoiya More</div>
+  </div>
+  <div className="contact-page-contact-sub-address">Aurangabad (Bihar)- 824101</div>
+  <div className="contact-page-contact-title">Call Us</div>
+  <div className="contact-page-contact-phone-line">
+    <PhoneIcon className="contact-page-contact-icon" />
+    <div className="contact-page-contact-text">+91971890521</div>
+    <PhoneIcon className="icon" />
+    <div className="contact-page-contact-text">+918789618100</div>
+  </div>
+  <div className="contact-page-contact-icon-link">
+    <PhoneIcon className="contact-page-contact-icon" />
+    <a className="contact-page-contact-link">+91971890521</a>
+  </div>
+  <div className="contact-page-contact-title">Whatsapp</div>
+  <div className="contact-page-contact-whatsapp-line">
+    <WhatsAppIcon className="contact-page-contact-icon" />
+    <p className="contact-page-contact-text">+919718905221</p>
+  </div>
+  <div className="contact-page-contact-title">Email</div>
+  <div className="contact-page-contact-email-line">
+    <MailIcon className="contact-page-contact-icon" />
+    <p className="contact-page-contact-text">info@haweli.com</p>
+  </div>
+  <div className="contact-page-contact-title">Follow Us</div>
+</div>
+
+                        <div style={{ marginTop: `${10 / 16}vw`, display: "flex", paddingBottom: "20px", color: "#333366" }}>
                             <div >
                                 <a href="https://www.facebook.com/Thehaweliresort" target="_blank" rel="noopener noreferrer">
-                                    <button style={{ cursor: 'pointer', fontSize: `${18/ 16}vw`,color:"#333366"  }}><FaFacebook /></button>
+                                    <button style={{ cursor: 'pointer', fontSize: `${18 / 16}vw`, color: "#333366" }}><FaFacebook /></button>
                                 </a>
                             </div>
                             <div >
                                 <a href="https://www.instagram.com/thehaweliresorts/" target="_blank" rel="noopener noreferrer">
-                                    <button style={{ marginLeft: `${10 / 16}vw`, cursor: 'pointer', fontSize: `${18/ 16}vw`,color:"#333366"  }}><FaInstagram /></button>
+                                    <button style={{ marginLeft: `${10 / 16}vw`, cursor: 'pointer', fontSize: `${18 / 16}vw`, color: "#333366" }}><FaInstagram /></button>
                                 </a>
                             </div>
                             <div >
                                 <a href="https://twitter.com/thehaweliresort" target="_blank" rel="noopener noreferrer">
-                                    <button style={{ marginLeft: `${10 / 16}vw`, cursor: 'pointer', fontSize: `${18/ 16}vw`,color:"#333366"  }}><FaTwitter /></button>
+                                    <button style={{ marginLeft: `${10 / 16}vw`, cursor: 'pointer', fontSize: `${18 / 16}vw`, color: "#333366" }}><FaTwitter /></button>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </Card>
-                <Card style={{ width: `${700 / 16}vw`, height: `${1000 / 16}vw`, marginTop: `${80 / 16}vw`, marginLeft: `${40 / 16}vw`, marginRight: `${20 / 16}vw`,border:"5px solid #F0E68C" }}>
-                    <form style={{ paddingLeft: `${25 / 16}vw` }}>
-                        <div style={{ fontSize: `${24/ 16}vw`, marginTop: `${30 / 16}vw`, fontWeight: "bold",color: "#CC9900",fontFamily: "cursive" }}>Send a Message</div>
-                        <div style={{ fontSize: `${20 / 16}vw`, marginTop: `${20 / 16}vw`, fontWeight: "bold",color: "#8A3324", }}>Name</div>
-                        <input type="text" style={{ height: "35px", marginTop: `${5 / 16}vw`, width: `${600 / 16}vw`, fontSize: "1vw" }} />
-                        <div style={{ fontSize: `${20 / 16}vw`, marginTop: `${20 / 16}vw`, fontWeight: "bold",color: "#8A3324", }}>Email</div>
-                        <input type="text" style={{ height: "35px", marginTop: `${5 / 16}vw`, width: `${600 / 16}vw`, fontSize: "1vw" }} />
-                        <div style={{ fontSize: `${20 / 16}vw`, marginTop: `${20 / 16}vw`, fontWeight: "bold",color: "#8A3324", }}>Subject</div>
-                        <input type="text" style={{ height: "35px", marginTop: `${5 / 16}vw`, width: `${600 / 16}vw`, fontSize: "1vw" }} />
-                        <div style={{ fontSize: `${20 / 16}vw`, marginTop:`${20 / 16}vw`, fontWeight: "bold",color: "#8A3324", }}>Message</div>
-                        <textarea type="text" style={{ height: `${100 / 16}vw`, marginTop: `${5 / 16}vw`, width: `${590 / 16}vw`, fontSize: `${14/ 16}vw`, padding: `${10 / 16}vw` }} />
-                        <button style={{ fontSize: `${18/ 16}vw`, marginTop: `${20 / 16}vw`, padding: `${5/ 16}vw`, backgroundColor: 'white', cursor: 'pointer', border: '2px solid #8A3324', borderRadius: `${5 / 16}vw`, fontWeight: "bold", backgroundColor: "#F0E68C", color: "#8A3324", }}>Submit</button>
+                <Card className="contact-page-message-card" style={{marginBottom:"5vw"}}>
+                    <form className="contact-page-message-form">
+                        <div className="contact-page-message-header">Send a Message</div>
+                        <div className="contact-page-form-label">Name</div>
+                        <input type="text" className="contact-page-input-field" />
+                        <div className="contact-page-form-label">Email</div>
+                        <input type="text" className="contact-page-input-field" />
+                        <div className="contact-page-form-label">Subject</div>
+                        <input type="text" className="contact-page-input-field" />
+                        <div className="contact-page-form-label">Message</div>
+                        <textarea className="contact-page-text-area" />
+                        <button className="contact-page-submit-button">Submit</button>
                     </form>
                 </Card>
+
             </div>
         </div>
     );

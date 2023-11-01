@@ -4,25 +4,35 @@ import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
 import Chip from '@mui/material/Chip'
 import NetworkWifiIcon from '@mui/icons-material/NetworkWifi';
+import "../css/testimonialCards.css"
+import { styled } from '@mui/system';
 
 export default function TestimonialCard() {
-    const starStyle = {
-        color: 'gold',
-        fontSize:"1vw"
-    };
-    return (
-        <Card style={{ maxWidth: `${250 / 16}vw`, boxShadow: "0 0 22px rgba(0, 0, 0, 0.6)" }}>
-            <CardActionArea style={{ cursor: "auto" }}>
+    const CustomChip = styled(Chip)(({ theme }) => ({
+        backgroundColor: 'black',
+        height: '1.5vw',
+        '@media (max-width: 600px)': {
+          height: '3vw', 
+        }
+        // Add more styles as needed
+      }));
 
-                <CardContent style={{ backgroundColor: "lightyellow" }}>
-                    <div style={{ fontWeight: 'bold', fontSize: `${18 / 16}vw`, color: "#8A3324" }}>
+    return (
+        <Card className="testimonial-card" style={{boxShadow:" 0 0 6vw rgba(0, 0, 0, 0.6 )", '@media (max-width: 768px)': {
+            boxShadow:" 0 0 9vw rgba(0, 0, 0, 0.6 )", 
+          }}}>
+            <CardActionArea className="testimonial-card-container">
+
+                <CardContent className="custom-card-content">
+                    <div className="custom-title">
                         <NetworkWifiIcon />Jayant Singh
                     </div>
-                    <div style={{ fontSize: '1vw', marginTop: '5px' }}>
-                        "It was really awesome management and decoration.we are really much happy and too much enjoying in my function..."
+                    <div className="custom-text">
+                        "It was really awesome management and decoration. We are really much happy and too much enjoying in my function..."
                     </div>
-                    <Chip label={<span style={starStyle}>★★★★</span>} sx={{ width: `${100 / 16}vw`, height: `${20 / 16}vw`, marginTop: `${5/ 16}vw`, backgroundColor: "black" }} style={{ fontSize: `${18 / 16}vw`}} />
+                    <CustomChip label={<a className="custom-star"> ★★★★  </a>} />
                 </CardContent>
+
             </CardActionArea>
         </Card>
     );
