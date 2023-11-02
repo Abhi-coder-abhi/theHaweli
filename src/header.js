@@ -117,7 +117,7 @@ const Header = () => {
       });
     setRegisterModalOpen(false);
   }
-  
+
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);
   const navigate = useNavigate();
@@ -160,21 +160,21 @@ const Header = () => {
             </div>
           </div>
           <div className="header-title">
-          <div
-            className="title"
-            onClick={() => navigate('/')}
-          >
-            <FontAwesomeIcon icon="fa-solid fa-hotel" />
-            <a style={{ marginLeft: '10px' }}>THE HAWELI</a>
-            <FontAwesomeIcon icon="fa-solid fa-hotel" style={{ marginLeft: '10px' }} />
+            <div
+              className="title"
+              onClick={() => navigate('/')}
+            >
+              <FontAwesomeIcon icon="fa-solid fa-hotel" />
+              <a style={{ marginLeft: '10px' }}>THE HAWELI</a>
+              <FontAwesomeIcon icon="fa-solid fa-hotel" style={{ marginLeft: '10px' }} />
+            </div>
+            <div className="resort" onClick={() => navigate('/')}>
+              Resort
+            </div>
           </div>
-          <div className="resort" onClick={() => navigate('/')}>
-            Resort
-          </div>
-        </div>
           <div className="button-container">
             <div className="whatsapp-container">
-            <div className="whatsapp-icon"  onClick={() => handleWhatsAppClick('+971890521')} ><a style={{fontSize:"1px"}}><WhatsApp/></a></div>
+              <div className="whatsapp-icon" onClick={() => handleWhatsAppClick('+971890521')} ><a style={{ fontSize: "1px" }}><WhatsApp /></a></div>
               <span className="whatsapp-number" onClick={() => handleWhatsAppClick('+971890521')}>
                 971890521
               </span>
@@ -190,9 +190,9 @@ const Header = () => {
               </button>
             )}
           </div>
-          
+
         </div>
-        
+
       </header>
       {isLoginModalOpen && (
         <div className="modal">
@@ -201,7 +201,7 @@ const Header = () => {
               <div className='login-modal-header'> User Login</div>
 
               <div className='login-modal-lebel1'> Email ID</div>
-              <input className='login-modal-input'  type="text" onChange={handleLogin} name='loginemail' />
+              <input className='login-modal-input' type="text" onChange={handleLogin} name='loginemail' />
 
               <div className='login-modal-lebel2' type="password" > Password</div>
               <input className='login-modal-input' type="password" onChange={handleLogin} name='loginpassword' />
@@ -216,58 +216,64 @@ const Header = () => {
 
       {isRegisterModalOpen && (
         <div className="modal">
-          <div className="modal-content" style={{ marginLeft: `${700/ 16}vw`, marginRight: `${400/ 16}vw`, marginTop: "20px", display: 'flex' }}>
-            <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: `${400/ 16}vw`,marginLeft:"1vw" }}>
-              <div style={{ fontSize: `${25/ 16}vw`, fontWeight: "bold" }}> User Registration</div>
-              <div style={{ display: 'flex',textAlign:"center" }}>
-                <div style={{ flex: 1, paddingRight: `${20/ 16}vw`}}>
-                  <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${20/ 16}vw` }}> Name</div>
-                  <input style={{ fontSize: `${18/ 16}vw`, width: "11vw", padding:  `${5/ 16}vw` }} type="text" onChange={handleChange} name='name' />
+          <div className="modal-content" >
+            <form class="registration-modal-form-container">
+              <div class="registration-modal-form-heading">User Registration</div>
+              <div class="registration-modal-form-columns">
+                <div class="registration-modal-left-column">
+                  <div class="registration-modal-form-input">
+                    <div class="registration-modal-form-label">Name</div>
+                    <input type="text" class="registration-modal-form-input" onChange={handleChange} name="name" />
+                    <div >
+                      <div class="registration-modal-form-label">Password</div>
+                      <input type="password" class="registration-modal-form-input" onChange={handleChange} name="password" />
+                    </div>
 
-
-                  <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${10/ 16}vw` }}> Password</div>
-                  <input style={{ fontSize:  `${15/ 16}vw`, width: '11vw', padding:  `${5/ 16}vw` }} type="password" onChange={handleChange} name='password' />
-
-                  <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${10/ 16}vw` }}> Confirm Password</div>
-                  <input style={{ fontSize:  `${15/ 16}vw`, width: '11vw', padding:  `${5/ 16}vw`}} type="password" onChange={handleChange} name='confirmPassword' />
+                    <div >
+                      <div class="registration-modal-form-label">Confirm Password</div>
+                      <input type="password" class="registration-modal-form-input" onChange={handleChange} name="confirmPassword" />
+                    </div>
+                  </div>
                 </div>
-                <div style={{ flex: 1, paddingLeft: `${20/ 16}vw` }}>
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${20/ 16}vw` }}> Email ID</div>
-                    <input style={{ fontSize: `${18/ 16}vw`, width: '11vw', padding:  `${5/ 16}vw` }} type="text" onChange={handleChange} name='email' />
-                    <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${10/ 16}vw` }}> Phone Number</div>
-                    <input style={{ fontSize: `${18/ 16}vw`, width: '11vw', padding: `${5/ 16}vw` }} type="text" onChange={handleChange} name='phoneNumber' />
-                    <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${10/ 16}vw` }}> Pincode</div>
-                    <input style={{ fontSize: '15px', width: '11vw', padding: `${5/ 16}vw` }} type="text" onChange={handleChange} name='pincode' />
+                <div class="registration-modal-right-column">
+                  <div class="registration-modal-form-input">
+                    <div class="registration-modal-form-label">Email ID</div>
+                    <input type="text" class="registration-modal-form-input" onChange={handleChange} name="email" />
+                    <div class="registration-modal-left-column">
+                      <div >
+                        <div class="registration-modal-form-label">Phone Number</div>
+                        <input type="text" class="registration-modal-form-input" onChange={handleChange} name="phoneNumber" />
+                      </div>
+                      <div >
+                        <div class="registration-modal-form-label">Pincode</div>
+                        <input type="text" class="registration-modal-form-input" onChange={handleChange} name="pincode" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div style={{ fontSize: `${20/ 16}vw`, marginTop: "10px" }}> Address</div>
-              <input style={{ fontSize:  `${15/ 16}vw`, width: '18vw', padding: "5px", marginLeft: "10px" }} type="text" onChange={handleChange} name='address' />
-              <div style={{ display: 'flex' }}>
-                <div style={{ flex: 1, paddingRight: `${20/ 16}vw`}}>
-                  <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${20/ 16}vw`,marginLeft:"0.5vw" }}> Photo</div>
-                  <input style={{ fontSize: '1vw', width: '11vw', padding:  `${5/ 16}vw`}} type="file"
-                    accept=".jpg, .jpeg, .png"
-                    onChange={handleChange} name='image' />
+              <div class="registration-modal-address-label">Address</div>
+              <input class="registration-modal-form-input1" type="text" onChange={handleChange} name="address" />
+              <div class="registration-modal-form-columns">
+                <div class="registration-modal-left-column">
+                  <div >
+                    <div class="registration-modal-form-label">Photo</div>
+                    <input class="registration-modal-form-input2" type="file" accept=".jpg, .jpeg, .png" onChange={handleChange} name="image" />
+                  </div>
                 </div>
-                <div style={{ flex: 1, paddingLeft:  `${20/ 16}vw` }}>
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div style={{ fontSize: `${20/ 16}vw`, marginTop: `${20/ 16}vw` }}> D.O.B.</div>
-                    <input style={{ fontSize: `${18/ 16}vw`, width: '11vw', padding: `${4/ 16}vw` }} type="date" onChange={handleChange} name='dateOfBirth' />
+                <div class="registration-modal-right-column">
+                  <div >
+                    <div class="registration-modal-form-label">D.O.B.</div>
+                    <input class="registration-modal-form-input2" type="date" onChange={handleChange} name="dateOfBirth" />
                   </div>
                 </div>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: `${20/ 16}vw` }}>
-                <button style={{ fontSize: `${20/ 16}vw`, textAlign: 'center', marginRight:  `${10/ 16}vw`, cursor: 'pointer' }} onClick={handleSubmit}>
-                  Submit
-                </button>
-                <button style={{ fontSize: `${20/ 16}vw`, textAlign: 'center', cursor: 'pointer' }} onClick={closeRegisterModal}>
-                  Cancel
-                </button>
+              <div class="registration-modal-form-columns">
+                <button class="registration-modal-form-button" onClick={handleSubmit}>Submit</button>
+                <button class="registration-modal-form-button" onClick={closeRegisterModal}>Cancel</button>
               </div>
-
             </form>
+
           </div>
         </div>
       )}
