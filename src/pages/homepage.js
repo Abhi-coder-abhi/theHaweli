@@ -92,7 +92,7 @@ const HomePage = () => {
 
             </div>
             <div className="more-facilities-button">
-                <button>More Rooms</button>
+                <button onClick={() => navigate('/rooms')}>More Rooms</button>
             </div>
             <div className="title-page">
                 <span>Our Facilities</span>
@@ -110,7 +110,7 @@ const HomePage = () => {
                 </div>
             </div>
             <div className="more-facilities-button">
-                <button>More Facilities</button>
+                <button onClick={() => navigate('/facilities')}>More Facilities</button>
             </div>
             <div className="title-page">
                 <span>Testimonials</span>

@@ -165,10 +165,10 @@ const Header = () => {
               onClick={() => navigate('/')}
             >
               <FontAwesomeIcon icon="fa-solid fa-hotel" />
-              <a style={{ marginLeft: '10px' }}>THE HAWELI</a>
+              <a style={{ marginLeft: '10px',cursor:"pointer" }}>THE HAWELI</a>
               <FontAwesomeIcon icon="fa-solid fa-hotel" style={{ marginLeft: '10px' }} />
             </div>
-            <div className="resort" onClick={() => navigate('/')}>
+            <div style={{cursor:"pointer"}} className="resort" onClick={() => navigate('/')}>
               Resort
             </div>
           </div>
@@ -179,13 +179,13 @@ const Header = () => {
                 971890521
               </span>
             </div>
-            <button className="register-button" onClick={openRegisterModal} disabled={loginStatus || registerStatus}>
+            <button className="register-button" style={{backgroundColor:"gold",fontWeight:"bold"}} onClick={openRegisterModal} disabled={loginStatus || registerStatus}>
               Register
             </button>
             {loginStatus ? (
               <span className="user-icon">👤</span>
             ) : (
-              <button className="login-button" onClick={() => openLoginModal()} disabled={loginStatus}>
+              <button className="login-button" style={{backgroundColor:"gold",fontWeight:"bold"}} onClick={() => openLoginModal()} disabled={loginStatus}>
                 Login
               </button>
             )}
@@ -206,7 +206,7 @@ const Header = () => {
               <div className='login-modal-lebel2' type="password" > Password</div>
               <input className='login-modal-input' type="password" onChange={handleLogin} name='loginpassword' />
               <div style={{ display: "flex", marginTop: "10px" }}>
-                <button style={{ fontSize: "20px", cursor: 'pointer' }} onClick={handleLoginSubmit}>Submit</button>
+                <button style={{ fontSize: "20px", cursor: 'pointer', marginLeft: "40px",color:"gold",backgroundColor:"black" }} onClick={handleLoginSubmit}>Submit</button>
                 <button style={{ fontSize: "20px", marginLeft: "10px", cursor: 'pointer' }} onClick={closeLoginModal}>Cancel</button>
               </div>
             </form>
@@ -222,26 +222,26 @@ const Header = () => {
               <div class="registration-modal-form-columns">
                 <div class="registration-modal-left-column">
                   <div class="registration-modal-form-input">
-                    <div class="registration-modal-form-label">Name</div>
+                    <div class="registration-modal-form-label">*Name</div>
                     <input type="text" class="registration-modal-form-input" onChange={handleChange} name="name" />
                     <div >
-                      <div class="registration-modal-form-label">Password</div>
+                      <div class="registration-modal-form-label">*Password</div>
                       <input type="password" class="registration-modal-form-input" onChange={handleChange} name="password" />
                     </div>
 
                     <div >
-                      <div class="registration-modal-form-label">Confirm Password</div>
+                      <div class="registration-modal-form-label">*Confirm Password</div>
                       <input type="password" class="registration-modal-form-input" onChange={handleChange} name="confirmPassword" />
                     </div>
                   </div>
                 </div>
                 <div class="registration-modal-right-column">
                   <div class="registration-modal-form-input">
-                    <div class="registration-modal-form-label">Email ID</div>
+                    <div class="registration-modal-form-label">*Email ID</div>
                     <input type="text" class="registration-modal-form-input" onChange={handleChange} name="email" />
                     <div class="registration-modal-left-column">
                       <div >
-                        <div class="registration-modal-form-label">Phone Number</div>
+                        <div class="registration-modal-form-label">*Phone Number</div>
                         <input type="text" class="registration-modal-form-input" onChange={handleChange} name="phoneNumber" />
                       </div>
                       <div >
@@ -252,24 +252,24 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div class="registration-modal-address-label">Address</div>
+              <div class="registration-modal-address-label">*Address</div>
               <input class="registration-modal-form-input1" type="text" onChange={handleChange} name="address" />
               <div class="registration-modal-form-columns">
                 <div class="registration-modal-left-column">
                   <div >
-                    <div class="registration-modal-form-label">Photo</div>
+                    <div class="registration-modal-form-label">*Photo</div>
                     <input class="registration-modal-form-input2" type="file" accept=".jpg, .jpeg, .png" onChange={handleChange} name="image" />
                   </div>
                 </div>
                 <div class="registration-modal-right-column">
                   <div >
-                    <div class="registration-modal-form-label">D.O.B.</div>
+                    <div class="registration-modal-form-label">*D.O.B.</div>
                     <input class="registration-modal-form-input2" type="date" onChange={handleChange} name="dateOfBirth" />
                   </div>
                 </div>
               </div>
               <div class="registration-modal-form-columns">
-                <button class="registration-modal-form-button" onClick={handleSubmit}>Submit</button>
+                <button class="registration-modal-form-button" style={{color:"gold",backgroundColor:"black"}} onClick={handleSubmit}>Submit</button>
                 <button class="registration-modal-form-button" onClick={closeRegisterModal}>Cancel</button>
               </div>
             </form>

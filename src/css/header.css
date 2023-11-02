@@ -79,24 +79,25 @@ box-shadow: 0% 0.1333% 0.2667% rgba(0, 0, 0, 0.2);
   z-index: 1000; /* Adjust the z-index to control the stacking order */
 }
 .login-modal-header{
-  font-size: 25px; font-weight: bold;
+  font-size: 25px; font-weight: bold;margin-left: 2vw;color: chocolate;
 }
 .login-modal-lebel1{
-   font-size: 1.25vw; margin-top: 1.25vw;
+   font-size: 1.25vw; margin-top: 1.25vw;margin-left: 2vw;color: blue;
 }
 .login-modal-lebel2{
-  font-size: 1.25vw; margin-top: 1.25vw;
+  font-size: 1.25vw; margin-top: 1.25vw;margin-left: 2vw;color: blue;
 }
 .login-modal-input{
-font-size: 1.15vw; width:25vw; padding: 10px;
+font-size: 1.15vw; width:25vw; padding: 10px;margin-left: 2vw;
 }
 /* Define the modal-content class to style the modal content */
 .modal-content {
   background: white;
   padding: 1.3333%;
 box-shadow: 0% 0% 3.3333% rgba(0, 0, 0, 0.2);
-border-radius: 0.6667%;
+border-radius: 5vw;
 margin-left: 29vw; margin-right:29vw; margin-top: 1.25vw;
+background-color: lightyellow;
 }
 .title{
  align-items: center;
@@ -112,12 +113,15 @@ margin-left: 29vw; margin-right:29vw; margin-top: 1.25vw;
   align-items: center;
   width: 28.125vw; /* Approximately 450/16 */
   margin-left: 3.5vw;
+
 }
 
 /* Define a class for the heading "User Registration" */
 .registration-modal-form-heading {
   font-size: 1.5625vw; /* Approximately 25/16 */
   font-weight: bold;
+  color:chocolate;
+  margin-left: 5vw;
 }
 
 /* Define a class for the columns */
@@ -146,6 +150,7 @@ margin-left: 29vw; margin-right:29vw; margin-top: 1.25vw;
   margin-top: 0.5vw; /* Approximately 20/16 */
   margin-left: 1vw; /* Approximately 10/16 */
   margin-bottom: 0.5vw;
+  color: blue;
 }
 
 /* Define a class for buttons */
@@ -162,6 +167,7 @@ margin-left: 29vw; margin-right:29vw; margin-top: 1.25vw;
   margin-top: 0.75vw; /* Approximately 20/16 */
   margin-left: 3.5vw; /* Approximately 10/16 */
   margin-bottom: 1.5vw;
+
 }
 .registration-modal-form-input2 {
   font-size: 1.125vw; /* Approximately 18/16 */
@@ -170,17 +176,20 @@ margin-left: 29vw; margin-right:29vw; margin-top: 1.25vw;
   margin-top: 0.75vw; /* Approximately 20/16 */
   margin-left: 3.5vw; /* Approximately 10/16 */
   margin-bottom: 1.5vw;
+ 
 }
 
 /* Define a class for labels */
 .registration-modal-form-label {
   margin-left: 0.03125vw; /* Approximately 0.5/16 */
+  color: blue;
 }
 
 /* Define a class for the "Address" label */
 .registration-modal-address-label {
   font-size: 1.25vw;
   margin-left: 3.43125vw; 
+  color: blue;
 }
 
 @media (max-width: 600px) {
@@ -254,6 +263,7 @@ margin-left: 20vw; margin-right:15vw; margin-top: 4vw;
 .registration-modal-form-heading {
   font-size: 5vw; 
   margin-right: 15vw;
+
 }
 
 .registration-modal-left-column {

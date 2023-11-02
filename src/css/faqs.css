@@ -1,0 +1,32 @@
+.faq-page-header{
+    margin-top: 8vw; margin-bottom: 4vw; font-size: 1.99vw; text-align: center;font-weight: bold;
+}
+.faq-page-card{
+border-radius: 2vw; box-shadow: 0 0 1.4vw rgba(0, 0, 0, 0.6); margin-bottom: 4vw; width: 80vw; margin-left: 5vw; height: 9vw;
+}
+.faq-page-card-container{
+    margin-left: 1vw; margin-right: 2vw;
+}
+.faq-page-card-header{
+     font-size: 1.5vw; color: #8A3324;
+}
+.faq-page-card-body{
+ margin-top: 0.5vw; margin-left: 2vw; font-size: 1.2vw; color: #333366;
+}
+@media (max-width: 600px)  {
+    .faq-page-header{
+        margin-top: 40vw; margin-bottom: 10vw; font-size: 7vw; 
+    }
+    .faq-page-card{
+        border-radius: 5vw; margin-bottom: 10vw; width: 80vw; margin-left: 5vw; height: 50vw;
+        }
+        .faq-page-card-container{
+            margin-left: 3vw; margin-right: 5vw;
+        }
+        .faq-page-card-header{
+            font-size: 5vw; 
+       }
+       .faq-page-card-body{
+        margin-top: 1.5vw; margin-left: 5vw; font-size: 3.5vw;
+       }
+}

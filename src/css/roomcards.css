@@ -27,12 +27,12 @@
   color: #8A3324
 }
 
-.room-features-chip { /* Adjust as needed */
-  height: 1.2vw; /* Adjust as needed */
+.room-features-chip { /* Adjust as needed *//* Adjust as needed */
   font-size: 0.6vw;
   color: gold;
-  margin-right: 1vw; /* Adjust as needed */
-
+  margin-right: 0.3vw; /* Adjust as needed */
+margin-top: 0.5vw;
+font-weight: bold;
 }
 .room-card-full-container{
   margin-left: 1vw;
@@ -47,7 +47,8 @@
 .room-features-facilities-label {
   margin-top: 0.3125vw; /* Adjust as needed */
   font-weight: bold;
-  margin-top: 2vw;
+  margin-top: 3vw;
+  font-size: 1.3vw;
 }
 
 .roomcard-features-facilities-chip {
@@ -55,23 +56,24 @@
   height: 1.25vw; /* Adjust as needed */
   font-size: 0.6vw;
   color: gold;
-  margin-right: 0.3125vw; /* Adjust as needed */
-  margin-top: 4vw;
+  margin-right: 0.3vw; /* Adjust as needed */
+  margin-top: 6vw;
 }
 
 .room-features-guests-label {
-  font-size: 1vw;
+  font-size: 1.3vw;
   font-weight: bold;
   color: #8A3324; /* Change the color as needed */
   margin-top: 2vw;
 }
 
 .room-features-guests-chip {
-  width: 6vw; /* Adjust as needed */
-  height: 1.25vw; /* Adjust as needed */
+/* Adjust as needed */ /* Adjust as needed */
+width: 6vw;
   font-size: 0.6vw;
   color: gold;
   margin-right: 0.3125vw; /* Adjust as needed */
+  font-weight: bold;
 }
 
 
@@ -88,6 +90,7 @@
   font-size: 0.6vw;
   color: gold;
   margin-top: 2vw;
+  font-weight: bold;
 }
 .booking-room-modal{
     top:  0;
@@ -102,7 +105,7 @@
   margin-left: 30vw; margin-right: 30vw; margin-top: 1.5vw; display: flex; border-radius: 1.25vw; background-color: lightyellow;
 }
 .booking-room-modal-form{
-   display: flex; flex-direction: column; align-items: center; width: 200%; border: chocolate;
+   display: flex; flex-direction: column; align-items: center; width: 200%; border: chocolate;margin-bottom: 2vw;
 }
 .booking-room-modal-header{
 font-size: 1.6vw; font-weight: bold; border-bottom: 2px solid #B8860B; display: inline-block; font-family: cursive; color: #B8860B;
@@ -163,10 +166,9 @@ display:flex
   }
   
   .room-features-chip { /* Adjust as needed */
-    height: 3.5vw; /* Adjust as needed */
     font-size: 1.5vw;
     margin-right: 3vw; /* Adjust as needed */
-    margin-top: 8vw;
+    margin-top: 1vw;
   }
   .room-features-facilities-container {
     font-size: 1vw;
@@ -182,17 +184,15 @@ display:flex
   
   .roomcard-features-facilities-chip {
     width: 15vw; /* Adjust as needed */
-    height: 3.5vw; /* Adjust as needed */
     font-size: 4.5vw;
     margin-right: 1vw; /* Adjust as needed */
     margin-top: 5vw;
   }
   .room-features-guests-chip {
-    width: 20vw; /* Adjust as needed */
-    height: 4vw; /* Adjust as needed */
+    width: 30vw; /* Adjust as needed */ /* Adjust as needed */
     font-size: 2vw;
     color: gold;
-    margin-right: 1vw; /* Adjust as needed */
+    margin-right: 0vw; /* Adjust as needed */
   }
   .room-features-rating-container {
     font-size: 4vw;
