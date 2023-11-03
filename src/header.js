@@ -176,7 +176,7 @@ const Header = () => {
             <div className="whatsapp-container">
               <div className="whatsapp-icon" onClick={() => handleWhatsAppClick('+971890521')} ><a style={{ fontSize: "1px" }}><WhatsApp /></a></div>
               <span className="whatsapp-number" onClick={() => handleWhatsAppClick('+971890521')}>
-                971890521
+                +91-971890521
               </span>
             </div>
             <button className="register-button" style={{backgroundColor:"gold",fontWeight:"bold"}} onClick={openRegisterModal} disabled={loginStatus || registerStatus}>

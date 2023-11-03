@@ -27,56 +27,56 @@ const Footer = () => {
             <div className="nav-link" onClick={() => navigate('/reviews')}>
               Reviews
             </div>
-            <div className="nav-link">Get Directions</div>
-            <div className="nav-link">Nearby Views</div>
+            <div className="nav-link" onClick={() => navigate('/contactUs')}>Get Directions </div>
+            <div className="nav-link" onClick={() => navigate('/nearby')}>Nearby Views</div>
             <div className="nav-link" onClick={() => navigate('/contactUs')}>
               Contact Us
             </div>
           </div>
           <div className='footer-section-title'>
             <div>
-              <h2 className="main-heading">Customer Help</h2>
+              <h2 className="main-heading" >Customer Help</h2>
             </div>
-            <div className="nav-link">Guest Support</div>
-            <div className="nav-link" onClick={() => navigate('/contactUs')}>
+            <div className="nav-link" onClick={() => navigate('/contactUs')}>Guest Support</div>
+            <div className="nav-link" onClick={() => navigate('/feedback')}>
               Guest Feedback
             </div>
             <div className="nav-link" onClick={() => navigate('/faqs')}>
               FAQS
             </div>
-            <div className="nav-link">Offers</div>
+            <div className="nav-link" onClick={() => navigate('/offers')}>Offers</div>
             <div className="nav-link" onClick={() => navigate('/contactUs')}>
               Location
             </div>
           </div>
           <div className="absolute-centered top-1">
-  <Chip label={<span className="footer-chip1">★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>} />
-</div>
-<div className="absolute-centered top-3">
-  <FontAwesomeIcon icon={faHotel} className="footer-icon" />
-  <a className="footer-icon">THE HAWELI</a>
-  <FontAwesomeIcon icon={faHotel} className="footer-icon" />
-</div>
-<div className="absolute-centered top-5">
-  Resort
-</div>
-<div className="absolute-centered top-7">
-  <Chip label={<span className="footer-chip2">★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>} />
-</div>
-<div className="absolute-centered top-10">
-  <img className="footer-image" src={logo} alt="My Image" />
-</div>
+            <Chip label={<span className="footer-chip1">★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>} />
+          </div>
+          <div className="absolute-centered top-3">
+            <FontAwesomeIcon icon={faHotel} className="footer-icon" />
+            <a className="footer-icon">THE HAWELI</a>
+            <FontAwesomeIcon icon={faHotel} className="footer-icon" />
+          </div>
+          <div className="absolute-centered top-5">
+            Resort
+          </div>
+          <div className="absolute-centered top-7">
+            <Chip label={<span className="footer-chip2">★★★★★★★★★★★★★★★★★★★★★★★★★★★★</span>} />
+          </div>
+          <div className="absolute-centered top-10">
+            <img className="footer-image" src={logo} alt="My logo" />
+          </div>
 
 
           <div className='footer-section-title'>
             <div>
               <h2 className="section-heading">Services</h2>
             </div>
-            <div className="nav-link-section">Tour Packages</div>
-            <div className="nav-link-section"  onClick={() => navigate('/accomodations')}>Accommodation</div>
-            <div className="nav-link-section">Security</div>
-            <div className="nav-link-section">Cleanliness</div>
-            <div className="nav-link-section">Management</div>
+            <div className="nav-link-section" onClick={() => navigate('/facilities')}>Facilities</div>
+            <div className="nav-link-section" onClick={() => navigate('/accomodations')}>Accommodation</div>
+            <div className="nav-link-section" onClick={() => navigate('/securities')}>Security</div>
+            <div className="nav-link-section" onClick={() => navigate('/cleanliness')}>Cleanliness</div>
+            <div className="nav-link-section" onClick={() => navigate('/management')}>Management</div>
           </div>
           <div >
             <div className='footer-contact-title'>Contact</div>
@@ -92,12 +92,11 @@ const Footer = () => {
                 <button className="social-media-button"><FaTwitter /></button>
               </a>
               <a href="https://www.instagram.com/thehaweliresorts/" target="_blank" rel="noopener noreferrer">
-                <button className="social-media-button"><WhatsAppIcon className="footer-whatsapp-icon"/></button>
+                <button className="social-media-button"><WhatsAppIcon className="footer-whatsapp-icon" /></button>
               </a>
               <a href="https://www.instagram.com/thehaweliresorts/" target="_blank" rel="noopener noreferrer">
                 <button className="social-media-button"><FaInstagram /></button>
               </a>
-
             </div>
           </div>
         </div>

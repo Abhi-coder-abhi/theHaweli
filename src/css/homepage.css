@@ -27,20 +27,18 @@
     font-size: 1.7vw;
     margin-left: 1vw;
     color: #8A3324;
-    background-color: transparent;
+    background-color: rgba(138, 51, 36, 0.3);
     border-radius: 0.625vw; /* 10px */
 border:0.2vw solid #8A3324;
-font-weight: bold;
 cursor: pointer;
   }
   .booking-buttons{
     font-size: 1.7vw;
     margin-left: 1vw;
     color: #8A3324;
-    background-color: transparent;
+    background-color: rgba(138, 51, 36, 0.3);
     border-radius: 0.625vw; /* 10px */
     border:0.2vw solid #8A3324;
-    font-weight: bold;
     cursor: pointer;
   }
   .our-rooms-title {
@@ -81,7 +79,7 @@ cursor: pointer;
     position: absolute;
     display: flex;
     top: 20vw;
-    left:41vw;
+    left:36vw;
     margin-right: 30vw;
   }
   .room-card{
@@ -336,6 +334,28 @@ cursor: pointer;
   .reach-us-section{
     margin-left: 10vw;
   }
-
+  .logo {
+    position: absolute;
+    top: 35vw; /* 300px */ /* 15px */
+    width: 20vw;
+    height: 14vw;
+  }
+  .buttons-container{
+    top: 50vw;
+    left:30vw;
+    margin-right: 30vw;
+  }
+  .more-rooms-button{
+    font-size: 3vw;
+    margin-left: 2vw;
+    border-radius: 1vw; /* 10px */
+  }
+  .booking-buttons{
+    font-size: 3vw;
+    margin-left: 2vw;
+    color: #8A3324;
+    background-color: rgba(138, 51, 36, 0.3);
+    border-radius: 1vw; /* 10px */
+  }
 }
   

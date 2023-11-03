@@ -6,8 +6,10 @@ import Chip from '@mui/material/Chip'
 import NetworkWifiIcon from '@mui/icons-material/NetworkWifi';
 import "../css/testimonialCards.css"
 import { styled } from '@mui/system';
+import result from "../Jsons/descriptions.json"
 
-export default function TestimonialCard() {
+export default function TestimonialCard(props) {
+    console.log(props)
     const CustomChip = styled(Chip)(({ theme }) => ({
         backgroundColor: 'black',
         height: '1.5vw',
@@ -18,19 +20,17 @@ export default function TestimonialCard() {
       }));
 
     return (
-        <Card className="testimonial-card" style={{boxShadow:" 0 0 6vw rgba(0, 0, 0, 0.6 )", '@media (max-width: 768px)': {
-            boxShadow:" 0 0 9vw rgba(0, 0, 0, 0.6 )", 
-          }}}>
+        <Card className="testimonial-card" style={{boxShadow:" 0 0 6vw rgba(0, 0, 0, 0.6 )", backgroundColor:"lightyellow"}}>
             <CardActionArea className="testimonial-card-container">
 
                 <CardContent className="custom-card-content">
                     <div className="custom-title">
-                        <NetworkWifiIcon />Jayant Singh
+                        <NetworkWifiIcon />{result[props.number].title}
                     </div>
                     <div className="custom-text">
-                        "It was really awesome management and decoration. We are really much happy and too much enjoying in my function..."
+                    {result[props.number].description}
                     </div>
-                    <CustomChip label={<a className="custom-star"> ★★★★  </a>} />
+                    <CustomChip label={<a className="custom-star" href=""> ★★★★  </a>} />
                 </CardContent>
 
             </CardActionArea>

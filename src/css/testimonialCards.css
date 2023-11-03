@@ -1,5 +1,5 @@
 .custom-card-content {
-    background-color: lightyellow;
+    
   }
   
   .custom-title {
@@ -30,6 +30,8 @@
   .testimonial-card{
     margin-left: 7.5vw;
     width: 15vw;
+    min-height: 18vw;
+    
   }
   @media (max-width: 600px)  {
     .testimonial-card{

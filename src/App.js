@@ -12,6 +12,12 @@ import Reviews from './pages/reviews';
 import Accomodations from './pages/accomodations';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Securities from './pages/securities';
+import Cleanliness from './pages/cleanliness';
+import Management from './pages/management';
+import Feedback from './pages/feedback';
+import Offers from './pages/offers';
+import NearBy from './pages/nearby';
 
 function App() {
   const theme = createTheme();
@@ -29,6 +35,12 @@ function App() {
         <Route path="/faqs" element={<Faqs/>} />
         <Route path="/reviews" element={<Reviews/>} />
         <Route path="/accomodations" element={<Accomodations/>} />
+        <Route path="/securities" element={<Securities/>} />
+        <Route path="/cleanliness" element={<Cleanliness/>} />
+        <Route path="/management" element={<Management/>} />
+        <Route path="/feedback" element={<Feedback/>} />
+        <Route path="/offers" element={<Offers/>} />
+        <Route path="/nearby" element={<NearBy/>} />
       </Routes>
       <Footer />
     </Router>

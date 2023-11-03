@@ -68,7 +68,7 @@ const HomePage = () => {
                     <BookingCard />
                 </div>
                 <div className="logo-container">
-                    <img src={logo} alt="My Image" className="logo" />
+                    <img src={logo} alt="logo" className="logo" />
                 </div>
                 <div className="buttons-container">
                     <button className="more-rooms-button" onClick={() => navigate('/rooms')}>
@@ -89,7 +89,6 @@ const HomePage = () => {
                 <div className="image-card">
                     <RoomImages />
                 </div>
-
             </div>
             <div className="more-facilities-button">
                 <button onClick={() => navigate('/rooms')}>More Rooms</button>
@@ -116,15 +115,15 @@ const HomePage = () => {
                 <span>Testimonials</span>
             </div>
             <div className="testimonials-section">
-                <TestimonialCard />
+                <TestimonialCard number='0'/>
                 <div >
-                    <TestimonialCard />
+                    <TestimonialCard number='1'/>
                 </div>
                 <div >
-                    <TestimonialCard />
+                    <TestimonialCard number='2'/>
                 </div>
                 <div>
-                    <TestimonialCard />
+                    <TestimonialCard number='3'/>
                 </div>
             </div>
             <div className="title-page">

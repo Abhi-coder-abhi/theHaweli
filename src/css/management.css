@@ -1,0 +1,80 @@
+.management-page-header {
+    margin-top: 8vw;
+    margin-bottom: 4vw;
+    font-size: 1.99vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+.management-page-container {
+    margin-top: 8vw;
+    margin-bottom: 18.5vw;
+    font-size: 2.5vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+.management-page-card {
+    border-radius: 2vw;
+    box-shadow: 0 0 1.4vw rgba(0, 0, 0, 0.6);
+    margin-bottom: 4vw;
+    width: 80vw;
+    margin-left: 5vw;
+    height: 9vw;
+}
+
+.management-page-card-container {
+    margin-left: 1vw;
+    margin-right: 2vw;
+}
+
+.management-page-card-header {
+    font-size: 1.5vw;
+    color: #8A3324;
+}
+
+.management-page-card-body {
+    margin-top: 0.5vw;
+    margin-left: 2vw;
+    font-size: 1.2vw;
+    color: #333366;
+}
+
+@media (max-width: 600px) {
+    .management-page-header {
+        margin-top: 40vw;
+        margin-bottom: 10vw;
+        font-size: 7vw;
+    }
+
+    .management-page-container {
+        margin-top: 8vw;
+        margin-bottom: 9.5vw;
+        font-size: 6vw;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .management-page-card {
+        border-radius: 5vw;
+        margin-bottom: 10vw;
+        width: 80vw;
+        margin-left: 5vw;
+        height: 50vw;
+    }
+
+    .management-page-card-container {
+        margin-left: 3vw;
+        margin-right: 5vw;
+    }
+
+    .management-page-card-header {
+        font-size: 5vw;
+    }
+
+    .management-page-card-body {
+        margin-top: 1.5vw;
+        margin-left: 5vw;
+        font-size: 3.5vw;
+    }
+}
